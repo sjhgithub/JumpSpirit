@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gesture-image="http://schemas.polites.com/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<ImageView
+        android:id="@+id/tiv_big"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+    <ImageView
+        android:id="@+id/iv_full_image_background"
+        android:layout_width="160dip"
+        android:layout_height="107dip"
+        android:layout_gravity="center"
+        android:background="@drawable/full_image_background" />
+
+    <ProgressBar
+        android:id="@+id/process_imageonline"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="160dip"
+        android:layout_height="107dip"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/onlineimage_loading_progressbar"
+        android:visibility="visible" />
+</FrameLayout>

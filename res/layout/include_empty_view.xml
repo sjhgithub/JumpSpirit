@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_view_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="40dp" 
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="50dip" >
+
+    <TextView
+        android:id="@+id/tv_empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/icon_nomail"
+        android:gravity="center"
+        android:paddingTop="15dp" 
+    />
+
+</LinearLayout>

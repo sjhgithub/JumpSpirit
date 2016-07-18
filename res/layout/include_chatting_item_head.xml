@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.mailchat.view.RoundImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chatting_item_head"
+    android:layout_width="36dip"
+    android:layout_height="36dip"
+    android:background="@drawable/icon_image_bg"
+    android:contentDescription="@null"
+    app:round_view_radius="3dp" />

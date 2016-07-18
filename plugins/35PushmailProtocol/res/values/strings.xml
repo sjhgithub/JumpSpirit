@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="version_name">4.1.13_20140926_1045</string>
+    <string name="show_no_sdcard_current">currently SD card insufficient storage</string>
+    <string name="show_no_available_movicard">integrated storage</string>
+    <string name="show_no_available_sdcard"> SD card </string>
+    <string name="show_no_available_current">currently </string>
+    <string name="show_no_available">insufficient storage</string>
+    <string name="show_no_available_part_1">Please exit, then remove the data in the</string>
+    <string name="show_no_available_part_2"> that you don’t need any more and retry to download
+		more emails</string>
+    <string name="show_no_available_exit35mail">Quit WeeMail</string>
+    <string name="show_sdchange_dialog_uninstall">SD card is not available now</string>
+    <string name="show_sdchange_dialog_uninstall_tip">Emails will be saved in the integrated storage, it
+		may cause repeated email receiving and unsynchronized email status.</string>
+    <string name="show_sdchange_dialog_install">SD card is available now</string>
+    <string name="show_sdchange_dialog_install_tip">Emails will be saved in your SD card storage, it
+		may cause repeated email receiving and unsynchronized email status.</string>
+    <string name="setting_about35Mail_nonet">There’s no network connection now, the [Push Mail]
+		setting will be unavailable, no impacts to other settings</string>
+    <string name="setting_about35Mail_getversion_failed">failed to get current version info.</string>
+    <string name="setting_ringtone_summary">Email arrival ringtone</string>
+    <string name="quickcontact_head">"Quick Contact"</string>
+    <string name="quickcontact_open_call">"Call"</string>
+    <string name="quickcontact_open_sms">"SMS"</string>
+    <string name="quickcontact_reply">"Send Mail"</string>
+    <string name="quickcontact_reply_all">"Reply All"</string>
+    <string name="quickcontact_delete">"Delete"</string>
+    <string name="quickcontact_edit_contact">"Edit Contact"</string>
+    <string name="quickcontact_add_contact">"Add Contact"</string>
+    <string name="quickcontact_send_mail">"Send Mail"</string>
+    <string name="quickcontact_add_contact_to_exist">"Save To Exist Contact"</string>
+    <string name="quickcontact_cancel">"Cancel"</string>
+    <string name="quickcontact_error">"Database Error"</string>
+    <string name="quickcontact_phonenumber">"Phone Number"</string>
+    <string name="quickcontact_button">"Confirm sending"</string>
+    <string name="quickcontact_context">"SMS Contents"</string>
+    <string name="quickcontact_phoneno">"Phone Number"</string>
+    <string name="quickcontact_sms_content">"SMS Contents"</string>
+    <string name="quickcontact_from_account">"View mail from this sender"</string>
+    <string name="quickcontact_same_subject">"View mail with the same topic"</string>
+    <string name="quickcontact_between_user_mail">"View incoming and outgoing mail"</string>
+    <string name="title_from">From:</string>
+    <string name="emailAddress">Mail Account</string>
+    <string name="password">Password</string>
+    <string name="account_other_setting_receivemode0_summary">Wifi: Complete mode, 2g/3g: Traffic saving mode.</string>
+    <string name="account_other_setting_receivemode1_summary">Auto-download subject only, not including mail body or attachment.</string>
+    <string name="account_other_setting_receivemode2_summary">Download subject， contents ， pictures and less than 2MB attachment.</string>
+    <string name="add_account_button">Account Binding</string>
+    <string name="progress_Info_login">Logining…</string>
+    <string name="progress_Info_move">Moving…</string>
+    <string name="login_not_35Account">Sorry, the mail account you input is not a 35
+		Instant Mail account.</string>
+    <string name="login_server_failed">Server returns the value of the error</string>
+    <string name="login_user_error">Username is illegal.</string>
+    <string name="login_user_repeat">Accounts have been added</string>
+    <string name="login_35Account_freeze">Your 35 Instant Mail account has been suspended ,
+		Please contact your technical support.</string>
+    <string name="login_error_password">The password you input is incorrect.</string>
+    <string name="setting_push_open">Push Mail is enabled</string>
+    <string name="setting_push_close">Push Mail is disabled</string>
+    <string name="setting_reset_account_delete">Remove</string>
+    <string name="setting_alert_reset_account">Confirm to remove current account and rebind a 35
+		Instant Mail account?</string>
+    <string name="setting_push_open_title">Push Mail</string>
+    <string name="setting_reset_account_title">Delete account</string>
+    <string name="setting_delete_current_account">Delete current account</string>
+    <string name="app_name">&#160;WeeMail</string>
+    <string name="accounts_title">"Your account"</string>
+    <string name="compose_title">"Compose"</string>
+    <string name="okay_action">"Confirm"</string>
+    <string name="cancel_action">"Cancel"</string>
+    <string name="send_action">"Send"</string>
+    <string name="yes">"Yes"</string>
+    <string name="no">"No"</string>
+    <string name="message_view_retry">Load full</string>
+    <string name="reply_action">"Reply"</string>
+    <string name="reply_all_action">"Reply All"</string>
+    <string name="delete_action">"Delete"</string>
+    <string name="move_action">"Move To"</string>
+    <string name="empty_action">Empty Trash</string>
+    <string name="forward_action">"Forward"</string>
+    <string name="done_action">"Finish"</string>
+    <string name="discard_action">"Cancel"</string>
+    <string name="save_draft_action">"Save as Draft"</string>
+    <string name="refresh_action">"Refresh"</string>
+    <string name="add_account_action">"Add Account"</string>
+    <string name="compose_action">"Compose"</string>
+    <string name="search_action">"Search"</string>
+    <string name="open_action">"Open"</string>
+    <string name="account_settings_action">"Settings"</string>
+    <string name="remove_account_action">"Remove Account"</string>
+    <string name="mark_as_read_action">"Mark read"</string>
+    <string name="mark_as_unread_action">"Mark unread"</string>
+    <string name="mark_as_star_action">"Favorite"</string>
+    <string name="mark_as_unstar_action">"Unfavorite"</string>
+    <string name="add_cc_bcc_action">"Unfold Cc/Bcc"</string>
+    <string name="delete_cc_bcc_action">"Fold Cc/Bcc"</string>
+    <string name="add_attachment_action">"Add Attachment"</string>
+    <string name="dump_settings_action">"Migration Settings"</string>
+    <string name="status_loading_more">"Loading Mails..."</string>
+    <string name="status_load_more">"Load more mails"</string>
+    <string name="status_network_error">"Connection Error"</string>
+    <string name="status_loading_more_failed">"Reloading more Mails "</string>
+    <string name="special_mailbox_name_favorite">Favorite</string>
+    <string name="special_mailbox_name_inbox">"Inbox"</string>
+    <string name="special_mailbox_name_outbox">Outbox</string>
+    <string name="special_mailbox_name_drafts">Drafts</string>
+    <string name="special_mailbox_name_trash">Trash</string>
+    <string name="special_mailbox_name_sent">Sent</string>
+    <string name="message_compose_to_hint">"To"</string>
+    <string name="message_compose_cc_hint">"Cc"</string>
+    <string name="message_compose_bcc_hint">"Bcc"</string>
+    <string name="message_compose_subject_hint">"Subject(choose)"</string>
+    <string name="message_compose_body_hint">"Message text"</string>
+    <string name="message_compose_fwd_header_fmt">		\n\n"-------- Oringinal --------"\n"Subject：<g id="SUBJECT" xmlns="urn:oasis:names:tc:xliff:document:1.2">%s</g>		"\n"From：<g id="SENDER" xmlns="urn:oasis:names:tc:xliff:document:1.2">%s</g>		"\n"To：<g id="TO" xmlns="urn:oasis:names:tc:xliff:document:1.2">%s</g>		"\n</string>
+    <string name="message_compose_fwd_header_cc_fmt">		"Cc：<g id="CC_0" xmlns="urn:oasis:names:tc:xliff:document:1.2">%s</g>		"\n\n</string>
+    <string name="message_compose_reply_header_fmt">		\n\n"<g id="SENDER" xmlns="urn:oasis:names:tc:xliff:document:1.2">%s</g>		Wrote："\n\n</string>
+    <string name="message_compose_quoted_text_label">"Quoted Text"</string>
+    <string name="message_compose_error_no_recipients">"You must add at least one recipient."</string>
+    <string name="message_compose_recipients_exist">Recipient already exists</string>
+    <string name="message_compose_error_wrong_recipients">Please input valid email address.</string>
+    <string name="message_compose_attachments_skipped_toast">"Some attachments have not been downloaded yet, so
+		you cannot forward this mail."</string>
+    <string name="message_compose_attachment_size">"Too large file, you cannot add attachment > 10
+		MB."</string>
+    <string name="message_view_to_label">"To："</string>
+    <string name="message_view_cc_label">"Cc："</string>
+    <string name="message_view_bcc_label">"Bcc："</string>
+    <string name="indicate_reader">%1$d read</string>
+    <string name="message_view_attachment_view_action">"Open"</string>
+    <string name="message_view_attachment_download_action">"DownLoad"</string>
+    <string name="message_view_attachment_save_action">"Save"</string>
+    <string name="message_view_attachment_preview_action">Preview</string>
+    <string name="message_view_attachment_downloading">DownLoading...</string>
+    <string name="message_view_status_attachment_saved">		"The attachment has been saved:<xliff:g id="FILENAME">%s</xliff:g><xliff:g id="FILENAME">%s</xliff:g>		"</string>
+    <string name="message_view_status_attachment_not_saved">"Cannot save the attachment."</string>
+    <string name="message_view_status_attachment_not_open">"Cannot open the attachment, please make sure your SD Card is available!"</string>
+    <string name="message_view_show_pictures_instructions">"Press on “Show Picture” button to display the
+		embedded picture."</string>
+		<string name="message_view_show_attachment_instructions">"Too much attachment, click to show"</string>
+    <string name="message_view_show_pictures_action">"Show Picture"</string>
+    <string name="message_view_show_attachment_action">"Show Attachment"</string>
+    <string name="message_view_fetching_attachment_toast">"Extracting attachments."</string>
+    <string name="message_deleted_toast">"Email has been deleted."</string>
+    <string name="message_discarded_toast">"Email has been canceled."</string>
+    <string name="message_saved_toast">"Email has been saved as draft."</string>
+    <string name="message_view_display_attachment_toast">"This attachment cannot be displayed."</string>
+    <string name="account_setup_failed_dlg_auth_message">"Username or password is incorrect"</string>
+    <string name="account_setup_failed_dlg_certificate_message">"Unable to securely connect to the server."</string>
+    <string name="account_setup_check_settings_canceling_msg">"Canceling..."</string>
+    <string name="account_setup_options_mail_check_frequency_label">"Email receiving frequency"</string>
+    <string name="account_setup_options_mail_check_frequency_never">"Never"</string>
+    <string name="account_setup_options_mail_check_frequency_5min">"Every 5min"</string>
+    <string name="account_setup_options_mail_check_frequency_10min">"Every 10min"</string>
+    <string name="account_setup_options_mail_check_frequency_15min">"Every 15min"</string>
+    <string name="account_setup_options_mail_check_frequency_30min">"Every 30min"</string>
+    <string name="account_setup_options_mail_check_frequency_1hour">"Every 1h"</string>
+    <string name="account_setup_options_mail_check_frequency_2hour">"Every 2h"</string>
+    <string name="account_settings_title_fmt">"General settings"</string>
+    <string name="account_settings_default_label">"Default account"</string>
+    <string name="account_settings_default_summary">"Send mail from this account by default"</string>
+    <string name="account_settings_notify_label">"Email notification"</string>
+    <string name="account_settings_notify_summary">"Notify in status bar when mail arrives"</string>
+    <string name="account_settings_notify_summary1">"Without notify in status bar when mail arrives"</string>
+    <string name="account_settings_mail_check_frequency_label">Mail receiving frequency</string>
+    <string name="account_settings_incoming_label">"Fetching mail"</string>
+    <string name="account_settings_outgoing_label">"Sending mail"</string>
+    <string name="account_settings_add_account_label">"Add another account"</string>
+    <string name="account_settings_description_label">"Account name"</string>
+    <string name="account_settings_name_label">"Your name"</string>
+    <string name="account_settings_notifications">"Notification settings"</string>
+    <string name="account_settings_vibrate_enable">"Vibrate"</string>
+    <string name="account_settings_vibrate_summary">"Vibrate when mail arrives"</string>
+    <string name="account_settings_vibrate_summary1">"No vibrate when mail arrives"</string>
+    <string name="account_settings_ringtone">Select ringtone</string>
+    <string name="account_settings_servers">"Server settings"</string>
+    <string name="pushmailwidget_label">"WeeMail"</string>
+    <string name="pushmailwidget_btn_new">"Create"</string>
+    <string name="pushmailwidget_btn_list">"List"</string>
+    <string name="pushmailwidget_btn_del">"Delete"</string>
+    <string name="pushmailwidget_btn_prev">"Previous"</string>
+    <string name="pushmailwidget_btn_next">"Next"</string>
+    <string name="pushmailwidget_status_synerror">"Synchronization error"</string>
+    <string name="pushmailwidget_status_mailnull">"No Mails"</string>
+    <string name="messageboxactivity_btn_ok">"Confirm"</string>
+    <string name="messageboxactivity_btn_cancel">"Cancel"</string>
+    <string name="messageboxactivity_caption">"Delete"</string>
+    <string name="messageboxactivity_tv_prompt">"Confirm to delete this mail?"</string>
+    <string name="show_no_connection_activity_btn_setting_text">"Settings"</string>
+    <string name="show_no_connection_activity_btn_cancel">"Cancel"</string>
+    <string name="show_no_connection_activity_caption">"Network connection error"</string>
+    <string name="show_no_connection_activity_tv_prompt">"No available network, please check!"</string>
+    <string name="show_no_connection_activity_tv_prompt_push">"You have new mail(s), please check network setting
+		and touch the [Refresh] button to receive them."</string>
+    <string name="directorypicker_dlg_overwrite_caption">"Save"</string>
+    <string name="directorypicker_dlg_overwrite_message">"%s already exists.\n Replace it?"</string>
+    <string name="directorypicker_dlg_overwrite_ok">"Confirm"</string>
+    <string name="directorypicker_dlg_overwrite_cancel">"Cancel"</string>
+    <string name="directorypicker_listview_up">"[Higher Level]"</string>
+    <string name="directorypicker_btn_save">"Save"</string>
+    <string name="directorypicker_btn_cancel">"Cancel"</string>
+    <string name="about">"About"</string>
+    <string name="about_info">Project Name：WeeMail\r\n
+		Version：v0.01.23rA1213\r\n
+		Copy Right：Xiamen 35Information Technology
+		Ltd. Co. (35Info) all
+		rights reversed</string>
+    <string name="about_dialog_ok">"Confirm"</string>
+    <string name="enter_account">Please input email account</string>
+    <string name="date_description">Today</string>
+    <string name="send_mail">Sending messages after encryption and compression&#8230;</string>
+    <string name="send_mail_success">Your message has been sent</string>
+    <string name="recipients_action">Add Contact</string>
+    <string name="save_draft">Are you sure save as draft?</string>
+    <string name="fetch_contacts_caption">Add Contact</string>
+    <string name="fetch_contacts_search">Search Contact</string>
+    <string name="fetchcontacts_btn_ok">Confirm</string>
+    <string name="fetchcontacts_btn_cancel">Cancel</string>
+    <string name="fetchcontacts_wait">Loading Contact information...</string>
+    <string name="delete_dialog_caption">"Delete"</string>
+    <string name="delete_dialog_prompt">"Are you sure to delete the mail?"</string>
+    <string name="wait_dialog_prompt">Deleting...</string>
+    <string name="wait_move_dialog_prompt">Move to...</string>
+    <string name="retry_send_mail">Refresh</string>
+    <string name="message_movinand">Mail folders are saved in MOVINAND</string>
+    <string name="message_sdcard">Mail folders are saved in SD Card</string>
+    <string name="message_movicard">Mail folders are saved in the device</string>
+    <string name="message_null">Storage capacity is below 2MB, please check!</string>
+    <string name="localstore_change_msg_activity_caption">SD Card has been plugged out!</string>
+    <string name="localstore_change_msg_activity_prompt">Put the database in device ROM instead of SD
+		card,
+		or press on [Cancel] and run WeeMail again after the SD card is
+		inserted!</string>
+    <string name="load_messagebody_error">The email is too large to be loaded, please read
+		this mail with your computer!</string>
+    <string name="unread_mails_state">unread</string>
+    <string name="all_list">All folders</string>
+    <string name="special_mailbox_zero_record">(0 piece)</string>
+    <string name="titleName">Search Range</string>
+    <string name="searchError">Keyword for search should not be empty</string>
+    <string name="search_menu_refresh_hxw">Refresh</string>
+    <string name="searchresulterror">Search result error, please search again</string>
+    <string name="result_is_null">no such result has found, please search again</string>
+    <string name="unread_mails_count">unread mail(s) </string>
+    <string name="confirm_mails_trash">Are you sure to empty the trash folder?</string>
+    <string name="clean_mails_trash">Emptying Trash</string>
+    <string name="sender">Sender</string>
+    <string name="phonenumber">PhontNumber</string>
+    <string name="button">ok</string>
+    <string name="account_setup_check_settings_title"></string>
+    <string name="username">username</string>
+    <string name="mail">mail</string>
+    <string name="save">save</string>
+    <string name="loading">Loading...</string>
+    <string name="loading_more_message">loading more messages</string>
+    <string name="no_subject">No Subject</string>
+    <string name="no_message_selected">No message selected</string>
+    <string name="folder_status_mailnull">No message </string>
+    <string name="login_account">Click to login your Account!</string>
+    <string name="empty_menu">Empty recycle bin</string>
+    <string name="setting_about35Mail_current_version">Current version: </string>
+    <string name="setting_about35Mail">About WeeMail</string>
+    <string name="amend_password_success">Modified successfully, please press on [Refresh]
+		button to receive new mails</string>
+    <string name="amend_password_title">Incorrect password, please check.</string>
+    <string name="get_mailmessage_label">E-mail the information to get the current
+		WeeMail</string>
+    <string name="get_mailmessage_desc">Get the current WeeMail mail information, such
+		as
+		total number of messages, the number of unread messages, etc.</string>
+    <string name="account_settings_mail_preview">Mail preview</string>
+    <string name="account_settings_mail_preview_title">Setting your mail preview lines</string>
+    <string name="account_settings_mail_preview_arrays_one_preview">1 line</string>
+    <string name="account_settings_mail_preview_arrays_two_preview">2 line</string>
+    <string name="account_settings_mail_preview_arrays_three_preview">3 line</string>
+    <string name="account_settings_mail_preview_arrays_four_preview">4 line</string>
+    <string name="account_settings_mail_desktop_title">Preview window notifier</string>
+    <string name="account_settings_mail_desktop_summary">Preview window notifier setting</string>
+    <string name="account_settings_mail_desktop_summary_temp1">Display preview window when new email arrives</string>
+    <string name="account_settings_mail_desktop_summary_temp2">Do not display preview window when new email arrives</string>
+    <string name="delete_account_accountlist">Confirm Delete Account  </string>
+    <string name="desk_remind_sender">From :</string>
+    <string name="desk_remind_title">The new mail arrives to remind</string>
+    <string name="desk_remind_preview">Mail preview ：</string>
+    <string name="desk_remind_preview_nocontent">mail content is null</string>
+    <string name="select_all">Select all</string>
+    <string name="cancel_all">Cancel all</string>
+    <string name="account_settings_signature_label">Use signature</string>
+    <string name="account_settings_signature_editor_label">Modify signature content</string>
+    <string name="account_edit_signature_title">Modify signature</string>
+    <string name="account_settings_signature_editor_label_getup">Discard</string>
+    <string name="account_settings_signature_editor_value_other">发自微妹手机邮箱客户端（支持qq\\163\\Gmail等邮箱）安卓客户端 | iPhone客户端</string>
+    <string name="account_settings_signature_open">Open</string>
+    <string name="account_settings_signature_close">Close</string>
+    <string name="quiet_time_setting">Quiet time settings</string>
+    <string name="quiet_time">Enable quiet time</string>
+    <string name="quiet_time_description_open">Shield the remind of ring and vibration</string>
+    <string name="quiet_time_description_close">NOT shield the remind of ring and vibration</string>
+    <string name="quiet_time_starts">Quiet time begins </string>
+    <string name="quiet_time_ends">Quiet time ends</string>
+    <string name="login_user_empty">User name or password is empty</string>
+    <string name="desk_remind_title_oa">Notification when new affair arrives</string>
+    <string name="restore_message_confirm">Restore from recycle bin to original folder?</string>
+    <string name="restore_dialog_title">Restore Messages</string>
+    <string name="restore_message">Restore</string>
+    <string name="restore_message_success">Email has been restored.</string>
+
+    <!-- 撰写邮件补充 add luxf -->
+    <string name="fetch_consignee">Choose contacts</string>
+    <string name="subject_null">The subject is empty</string>
+    <string name="Send_without_subject">Send without a subject?</string>
+
+    <!-- 撰写邮件补充 add luxf -->
+    <!-- 其他设置  begin add liujie -->
+    <string name="account_setting_other">Other settings</string>
+    <string name="account_setting_savecopy_title">Keep server mails</string>
+    <string name="account_setting_savecopy_summary1">Emails will not be auto-removed from server</string>
+    <string name="account_setting_savecopy_summary2">Server mails will be auto-removed once received by
+		mobile client</string>
+    <string name="account_setting_savecopy_dia_title">Cancel email-copies on server</string>
+    <string name="account_setting_savecopy_dia_message">Sure to auto-remove email-copies on server? If
+		sure，all the emails that have been fully downloaded to your mobile
+		device will be auto-removed from server!</string>
+    <!-- 其他设置  end add liujie -->
+
+    <string name="load_deleted_message_dialog_title">Can not download all the contents of this email </string>
+    <string name="load_deleted_message_dialog_content">This email has been removed from server, can not
+		download all the contents of it. </string>
+    <string name="account_setting_mail_size">Mail size limit</string>
+    <string name="account_setting_mail_size_only_title">Only title</string>
+    <string name="account_setting_mail_size_no_limit">No limit</string>
+    <string name="mail_send_failed_title">Failed to send</string>
+    <string name="messagelist_title">%1$s (%2$d)</string>
+    <string name="messagelist_title_show_size">%1$d %2$s</string>
+    <string name="mail_has_been_selected">Has been selected %1$d seal</string>
+    <string name="sending_mail_notice">This email is sending ,please try later!</string>
+    <string name="file_open_style">Please select how to open it</string>
+    <string name="fulling_mail_cant_cancel">Loading, cannot be canceled.</string>
+    <string name="account_safe">Security settings </string>
+    <string name="account_safe_password">Access code </string>
+    <string name="account_safe_password_summary"> Access code is not enabled </string>
+    <string name="account_safe_password_summary1"> Access code has been enabled </string>
+    <string name="account_safe_setting"> Set access code </string>
+    <string name="account_safe_setting_summary"> Set the access code </string>
+    <string name="account_safe_setting_hint1">Input a new access code</string>
+    <string name="account_safe_setting_hint2">Input access code again</string>
+    <string name="account_safe_setting_error">Enter the access code twice inconsistent</string>
+    <string name="account_safe_setting_success">Set up success ,current password is: </string>
+    <string name="account_safe_setting_empty_password">Access code can not be empty</string>
+    <string name="account_safe_setting_enter_password">Please input access code</string>
+    <string name="check_email_password">Hint</string>
+    <string name="check_email_password_message1">if forgot it, please input your email address: </string>
+    <string name="check_email_password_message2">"'s password to clean the access code, thanks!"</string>
+    <string name="check_email_password_dialog_hint">Please enter your email password</string>
+    <string name="check_email_password_success">Successful access code verification</string>
+    <string name="check_email_password_failed">Failure access code verification</string>
+    <string name="connect_error">Connect server failed</string>
+    <string name="connect_cont_login_title">Can not login</string>
+    <string name="connect_cont_login_message">Due to incorrect password or account status error, please input correct password or contact with your email administrator, thanks.</string>
+    <string name="connect_cont_checkpass">Input password</string>
+    <string name="account_id">Account ID</string>
+    <string name="account_request_mail_limit_title">The number of loaded emails</string>
+    <string name="account_request_mail_limit_summary">Set number of emails to be loaded, larger number costs more time</string>
+    <string name="account_request_mail_limit_dialog_title">Set number of emails to be loaded as limitation</string>
+    <string name="account_request_mail_limit_dialog_values_20">20 pieces</string>
+    <string name="account_request_mail_limit_dialog_values_50">50 pieces</string>
+    <string name="account_request_mail_limit_dialog_values_100">100 pieces</string>
+    <string name="clear_action">Backspace</string>
+    <string name="check_no_push">Unauthorized for PushMail Service. Please contact your administrator.</string>
+    <string name="check_no_push_failed">Validate push permissions failed, please try again</string>
+    <string name="operate_notice">Notice</string>
+    <string name="operate_waiting">Please wait while operating...</string>
+    <string name="sort_action">Sort</string>
+    <string name="sort_menu_title">Sort Messages</string>
+    <string name="sort_by_date">Date (Most recent)</string>
+    <string name="sort_by_date_desc">Date (Oldest)</string>
+    <string name="sort_by_favorite">Priority (Highest)</string>
+    <string name="sort_by_favorite_desc">Priority (Lowest)</string>
+    <string name="sort_by_subject">Subject (A -> Z)</string>
+    <string name="sort_by_subject_desc">Subject (Z -> A)</string>
+    <string name="sort_by_sender">Sender (A -> Z)</string>
+    <string name="sort_by_sender_desc">Sender (Z -> A)</string>
+    <string name="access_code_is_enabledno_email_content_preview">"Access code is enabled, no email content preview."</string>
+
+    <!-- Mail2.0 a variety of unusual message -->
+    <string name="error_connect_error"> connection error </string>
+    <string name="error_code_version_no"> version number is not correct, do not support </string>
+    <string name="error_code_login_no"> Login failed </string>
+    <string name="error_code_connect_error"> already disconnected from the server </string>
+    <string name="error_disk_io_error"> local read and write data failed </string>
+    <string name="error_server_io_error"> communicate with the server failed </string>
+    <string name="error_request_parmars">request parameter error</string>
+    <string name="error_request_error_format"> request format error </string>
+    <string name="error_out_of_memory"> for attachment header error </string>
+    <string name="login_35Account_account_unusered">Your account has been disabled,please contact with your email administrator</string>
+    <string name="login_35Account_error_email">35 immediate-mail account does not exist or has been deleted</string>
+    <string name="login_35Account_account_closed">The username or password you entered is incorrect.</string>
+    <string name="current_no_space">Not Enough Disk Space</string>
+    <string name="check_mobile_failed">"You cannot use WeeMail, because your device is not 35Phone or 35Pad!"</string>
+    <string name="error_downl_att">Download the attachment failed</string>
+    <string name="new_message_toast">Received %d new message</string>
+    <string name="no_new_message_toast">No new message</string>
+    <string name="synchronism_finish">Synchronization complete</string>
+    <string name="view_failed">Loading failure, please retry!</string>
+    <string name="load_view_failed">Click on the button below to download and view the complete email.</string>
+    <string name="load_view_hintRetry">Request complete mail error from server, you can click Retry.</string>
+    <string name="load_view_hintLoading">loading......</string>
+    <string name="submit">Submit</string>
+    <string name="feedback">Feedback</string>
+    <string name="feedback_not_null">Please Write The Feedback</string>
+    <string name="feedback_succee">Thank for your Feedback!</string>
+    <string name="feedback_fail">Feedback failure!</string>
+    <string name="feedback_default">If you have got some suggestions, please feedback.</string>
+    <string name="update_dialog_title">Found new version</string>
+    <string name="update_dialog_msg1">The new version of WeeMail has been released, you must update, Please update!</string>
+    <string name="update_dialog_msg2">The new version of WeeMail has been released, Please update!</string>
+    <string name="updatebar_release_update">Release to update</string>
+    <string name="updatebar_doing_update">Updating...</string>
+    <string name="updatebar_pull_update">Pull to update</string>
+    <string name="last_update">Last update:</string>
+    <string name="message_list_display_options">Display options</string>
+    <string name="message_list_display_options_all">All</string>
+    <string name="message_list_display_options_unread">Unread</string>
+    <string name="message_list_display_options_tome">Direct to me</string>
+    <string name="quickcontact_contact">Add</string>
+    <string name="quickcontact_edit">Edit</string>
+    <string name="folderlist_title">Folders</string>
+    <!-- Accountlist账号列表 -->
+    <string name="accountlist_title">Mail account list</string>
+    <string name="accountlist_title_dialogtitle">New Account</string>
+    <string name="search_activity_title">Search Results</string>
+    <string name="deskTopNotifyActivity_view">View</string>
+    <string name="deskTopNotifyActivity_close">Close</string>
+    <string name="account_dialog_submit">Sign In</string>
+    <string name="account_dialog_cancel">Cancel</string>
+    <string name="quickcontact_set_successful_already_read">"The mail has been marked as read"</string>
+    <string name="quickcontact_set_successful_never_read">"The mail has been marked as unread"</string>
+    <string name="addresser_message">"Sender information"</string>
+    <string name="edit_again">"Edit Again"</string>
+    <string name="account_banding_swtich">"Switch to this account"</string>
+    <!-- NaviActivity -->
+    <string name="navi_close">close</string>
+    <string name="mail_navi">User guide</string>
+    <string name="version_code">Ver：</string>
+    <!-- search range -->
+    <string name="search_range_all">All</string>
+    <string name="search_range_content">Content</string>
+    <string name="search_range_subject">Subject</string>
+    <string name="search_range_recipient">Recipient</string>
+    <string name="search_range_sender">Sender</string>
+    <string name="message_compose_sender">Sender:</string>
+    <!-- MainActivity -->
+    <string name="account_setting_push_range_settings">Push range</string>
+    <string name="account_setting_set_the_range_of_push">Set the range of push</string>
+    <string name="account_setting_all">All</string>
+    <string name="account_setting_only_from_important_sender">Only from important sender</string>
+    <string name="account_setting_recived">Recived(except Cc)</string>
+    <string name="account_setting_resend">Resend</string>
+    <!-- slidepage -->
+    <string name="no_every_messge">"No message, you can drop-down to refresh."</string>
+    <string name="no_sdcard_or_insufficient_storage">No SD card or currently SD card insufficient storage</string>
+    <string name="auto_load_title">Automatically load more</string>
+    <string name="auto_load_summary">Reach the bottom of the list then auotomatically load more</string>
+    <string name="show_password">Show password</string>
+    <string name="suffix_35cn">\@35.cn</string>
+    <string name="suffix_channel">\@china-channel.com</string>
+
+    <!-- 邮件列表底部常见按钮 -->
+    <string name="btntext_trashbox_delete">Delete All</string>
+    <string name="btntext_outbox_resend">Resend All</string>
+    <string name="btntext_outbox_delete">Delete List</string>
+    <string name="alerttext_emptyoutbox">Are you sure to empty cunrrent list?</string>
+    <string name="alerttext_emptyoutbox_eror">The message is sending, you cannot empty the list.</string>
+    <string name="toast_alert_epmty">There are no messages</string>
+    <string name="toast_alert_cannotresend">Retransmission has not been completed, please wait.</string>
+    <string name="toast_alert_cannotquickopera">"You cannot use the shortcut menu while sending the message." </string>
+    <string name="quickcontact_select_listtitle">Common Operations</string>
+    <string name="menu_ad_desplay">View Demo</string>
+    <string name="alertstr_addisplay">View demo should consume network traffic,are you sure to continue?</string>
+    <string name="mail_intro">Help</string>
+    <!-- 快速邮件操作 -->
+    <string name="str_quickemail_createcontact">Create New Contact</string>
+    <string name="str_quickemail_call">Call Sender </string>
+    <string name="str_quickemail_sms">Send Message to Sender</string>
+    <string name="str_quickemail_reply">Reply</string>
+    <string name="str_quickemail_resend">Resend</string>
+    <string name="str_quickemail_replyall">Reply All</string>
+    <string name="str_quickemial_forward">Forward</string>
+    <string name="str_quickemail_delete">Delete</string>
+    <string name="str_quickemail_move">Move To</string>
+    <string name="str_quickemail_move_success">Moved email successfully！</string>
+    <string name="str_quickemail_move_fail">Failed to move email！</string>
+    <string name="str_quickemail_recall">Recall mail</string>
+    <string name="recall_action">Recall</string>
+    <string name="str_recall_mail_dialog">Are you sure recall this mail ?</string>
+    <string name="str_quickemail_selectnum">Select a phone number</string>
+
+    <!-- attachment -->
+    <string name="too_much_item">Too many files in the Compressed package,pls download</string>
+    <string name="attachment">attachment</string>
+    <string name="attachment_fold">Folding</string>
+    <string name="attachment_expand">Expand</string>
+    <string name="send_mail_fail_for_attachment1">The Subject of </string>
+    <string name="send_mail_fail_for_attachment2"> that original mail has deleted , mail auto-save to draft,send mail that delete attachment please.</string>
+    <string name="file_not_exist">File does not exist</string>
+    <string name="vcard_notify">"Vcard don't supply."</string>
+    <string name="loading_account_mail">Logging In&#160;</string>
+    <string name="please_wait">&#160;Please be patient</string>
+    <string name="getpreview_fail">Fail to get preview of mail content</string>
+    <string name="account_settings_picture_title">Image quality automatically</string>
+    <string name="account_settings_picture_auto_summary">Picture clarity of uploading will be automatically optimized in waln network environment</string>
+    <string name="account_settings_picture_manual">The quality of upload image</string>
+    <string name="account_settings_picture_manual_summary">Adjust the quality of uploading image</string>
+    <string name="picture_quality_high">High</string>
+    <string name="picture_quality_medium">Medium</string>
+    <string name="picture_quality_low">Low</string>
+    <string name="account_settings_mail_font">Fit messages size</string>
+    <string name="account_settings_mail_font_title">Fit messages size</string>
+    <string name="account_settings_mail_preview_arrays_100">Small</string>
+    <string name="account_settings_mail_preview_arrays_default">Default</string>
+    <string name="account_settings_mail_preview_arrays_200">Heavy</string>
+    <string name="account_settings_mail_preview_arrays_300">Huge</string>
+    <string name="mail_attachment_dialog_title">Attachment Size Notice</string>
+    <string name="mail_attachment_dialog_message">Currently in 2G/3G network, the attachment is more than 1024kb. Do you still want to upload?</string>
+    <string name="account_other_setting_receivemode">Receive mode</string>
+    <string name="account_other_setting_receivemode_selectdlgtitle">Please select the receive mode</string>
+    <string name="account_other_setting_receivemode_auto">Intelligent switch</string>
+    <string name="account_other_setting_receivemode_autoinfo">Switch the mode automatically between (full-page) mode and low data mode according to the network condition and device storage</string>
+    <string name="account_other_setting_receivemode_limit">Save flow mode</string>
+    <string name="account_other_setting_receivemode_limitinfo">Only receive the title and preview, but no full-page mode</string>
+    <string name="account_other_setting_receivemode_most">Full-page mode</string>
+    <string name="account_other_setting_receivemode_mostinfo">Receive the title and content body</string>
+    <string name="account_settings_screenchange">Screen Auto-Rotation</string>
+    <string name="account_settings_screenchange_summary">Do you want to set Auto-Rotation when the device change the orientation</string>
+    <string name="account_settings_autosync">Auto-Sync</string>
+    <string name="account_settings_autosync_summary">Automatically sync the status of mails with server, it will consume more data.</string>
+    <string name="delete_account_show_message">"Being deleted……"</string>
+    <string name="message_compose_title_popupwindow_addbcc">"Add Bcc"</string>
+    <string name="message_compose_title_popupwindow_deletebcc">"Delete Bcc"</string>
+    <string name="message_compose_title_popupwindow_save_draft">"Save Draft"</string>
+    <string name="message_compose_title_popupwindow_switch_account">"Switch sender"</string>
+    <string name="message_compose_equipment_not_start">"Equipment Can Not Start"</string>
+    <string name="register_ip_push_fail_for_no_authority">"Account Have Not IPPush Authority"</string>
+    <string name="register_ip_push_fail">"IPPush Register Failure"</string>
+    <string name="no_new_version">"It's the latest version"</string>
+    <string name="menu_exit">Exit</string>
+    <string name="search_activity_history_delete">Clear</string>
+    <string name="search_activity_history_search">Search History</string>
+    <string name="experience_title">Try now</string>
+    <string name="experience_domain">"@try.35.cn"</string>
+    <string name="experience_edithint">"Username (only digits or letters)"</string>
+    <string name="experience_sameaccount">Username already exists, please input another one.</string>
+    <string name="experience_edit_null">Please input a username!</string>
+    <string name="experience_process_reg">"Signing up………"</string>
+    <string name="folder">Folder</string>
+    <string name="custom_folder">My folder</string>
+    <string name="no_custom_folder">No folder so far </string>
+    <string name="set">Settings</string>
+    <string name="search">Search</string>
+    <string name="batch">Multi-choice</string>
+    <string name="batch_cancel">Cancel choice</string>
+    <string name="account_new_version">Check new version</string>
+    <string name="update_error">"There isn't new version" </string>
+    <string name="all_message">All messages</string>
+    <string name="unread_message">Unread</string>
+    <string name="unread_message_show_size">Unread</string>
+    <string name="tome_message">Direct to me</string>
+    <string name="tome_message_show_size">Direct to me</string>
+    <string name="c35_prm">35PRM</string>
+    <string name="c35_meeting">35Eeeting</string>
+    <string name="c35_oa">35PushOA</string>
+    <string name="c35_eq">35EQ</string>
+    <string name="c35_eware">35Ewave</string>
+    <string name="c35_app">35Cloud </string>
+    <string name="c35_prm_desc">Business relationships in your hand</string>
+    <string name="c35_meeting_desc">Remote conference with any device</string>
+    <string name="c35_oa_desc"> Case handling with no barriers</string>
+    <string name="c35_eq_desc">Cross-functional discussion, just one click</string>
+    <string name="c35_eware_desc">Connect social across your enterprise</string>
+    <string name="c35_app_install">Install</string>
+    <string name="c35_app_update">Update</string>
+    <string name="c35_app_run">Run</string>
+    <string name="recommed_dialog_content">Dear honored user, you can exerience more 35CloudOffice services,try now! </string>
+    <string name="recommed_dialog_ok">View Now</string>
+    <string name="recommed_dialog_cancel">Try later</string>
+    <string name="message_compose_bottom_btn_camera">Camera</string>
+    <string name="message_compose_bottom_btn_record">Record</string>
+    <string name="message_compose_bottom_btn_albums">Albums</string>
+    <string name="message_compose_bottom_btn_Files">Files</string>
+    <string name="message_compose_compose">Compose</string>
+    <string name="quick_contact_dialog_message">No cloud office apps have been installed?</string>
+    <string name="quick_contact_dialog_ok">Install now</string>
+    <string name="quick_contact_dialog_cancel">Install later</string>
+    <string name="quick_contact_operate_chat_with_eq">Chat With EQ</string>
+    <string name="c35app_dialog_message">downloading,please waiting……</string>
+    <string name="c35app_dialog_loading_message">loading……</string>
+    <string name="sure_download_mail">Are you sure to download WeeMail?</string>
+    <string name="is_lastest_version">"It's the lastest version"</string>
+    <string name="message_compose_alam_error">Get picture fail！</string>
+    <string name="search_activity_imap_time_out">IMAP Search Message Time Out</string>
+    <string name="pushmail_service_notify_for_updatemessages_failure">"Slow loading，please manually refresh"</string>
+    <string name="message_compose_attachment_had_add">"The file is already loaded"</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="permisstion35_desc">35AppService Send Broadcast</string>
+    <string name="permisstion35_label">35AppService Send Broadcast</string>
+    <string name="downloading">downloading……</string>
+    <string name="up_data_download">download……</string>
+    <string name="up_data_cancel">cancel</string>
+    <string name="show_no_internet">"No available network"</string>
+    <string name="show_no_sdcard">"SD card is not available now"</string>
+    <string name="c35open_open_failed">Run failed</string>
+    <string name="c35open_download_fail">Download faided</string>
+    <string name="download_resource">No Download resource</string>
+    <string name="c35open_updata_version">Check to the new version</string>
+    <string name="experience_persion_title">Sign up for trial</string>
+    <string name="experience_persion_info">Sign up WeeMail account in a matter of seconds.</string>
+    <string name="experience_domain_title">Sign up for 35 Cloud Office service</string>
+    <string name="experience_domain_info">Enjoy 35 cloud mail, mobile  OA, ewave, EQ IM, Online video meeting services.</string>
+    <string name="experience_domainnull">Please sign in your account!</string>
+    <string name="experience_domain_hint">Account</string>
+    <string name="experience_domain_hint2">Please sign in cloud service account (Only digits or letters are allowed)</string>
+    <string name="experience_domain_hint3">Password, at least 6 characters</string>
+    <string name="experience_domain_hint4">Cellphone number (11 digits)</string>
+    <string name="experience_domain_pwd_error">Password must at least 6 characters!</string>
+    <string name="experience_editnull">Cannot be blank!</string>
+    <string name="experience_domain_regsuccess">Congratulations, sign up 35 Cloud service successfully!</string>
+    <string name="experience_domain_reg_account">Please set up your username and password (Cannot be blank)</string>
+    <!-- <string name="experience_domain_reg_must">(Cannot be blank)</string>  <string name="experience_domain_reg_mustnot">(Can be blank)</string> -->
+    <string name="experience_domain_reg_must"></string>
+    <string name="experience_domain_reg_mustnot"></string>
+    <string name="experience_domain_reg_tel">Fill in cellphone number then you can find your lost password later (Can be blank)</string>
+    <string name="experience_connectserver_timeout">Server connection time out!</string>
+    <string name="experience_domain_success_text1">"You have signed up "</string>
+    <string name="experience_domain_success_text2">Cloud service.</string>
+    <string name="experience_domain_tel_error">Please input correct cellphone number!</string>
+    <string name="experience_domain_accounterror_exist">User name is existing in this domain!</string>
+    <string name="experience_error_server">Error message from server, please retry!</string>
+    <string name="experience_error_server_fail">Sign up failed, please retry!</string>
+    <string name="experience_back_alert">You have not signed up a account, sure to exit? </string>
+    <string name="experience_account_set">Account Settings</string>
+    <string name="setting_language_auto">Auto</string>
+    <string name="setting_language_cn">简体中文</string>
+    <string name="setting_language_en">English</string>
+    <string name="setting_language_tw">繁體中文</string>
+    <string name="recall_mail">"Recalling mail..."</string>
+    <string name="messageiew_readers_allread">All read</string>
+
+    <!-- 会议 -->
+    <string name="meeting_info">Meeting information</string>
+    <string name="meeting_info_starttime">Begin ：</string>
+    <string name="meeting_info_endtime">End ： </string>
+    <string name="meeting_info_location">Meeting Location ：</string>
+    <string name="meeting_attend">Participate? ：</string>
+    <string name="meeting_attend_yes">Yes</string>
+    <string name="meeting_attend_maybe">Maybe</string>
+    <string name="meeting_attend_no">No</string>
+
+    <!-- 设置 -->
+    <string name="setting_account_parent">Account</string>
+    <string name="setting_disply_parent">Display</string>
+    <string name="setting_datecontrol_parent">Traffic monitoring</string>
+    <string name="setting_safe_parent">Security</string>
+    <string name="setting_other_notify_parent">Other notification</string>
+    <string name="setting_recommend_parent">35 CloudOffice</string>
+    <string name="setting_clear_cache_parent">Clear cache</string>
+    <string name="setting_add_account">Add new account</string>
+    <string name="setting_language">Language setting</string>
+    <string name="setting_language_dialog_title">Language</string>
+    <string name="setting_ringtone_dialog_title">Ringtone</string>
+    <string name="setting_notify_tiltle">Notification</string>
+    <string name="setting_shake">Shake to see unread mails</string>
+    <string name="setting_ringtone_default">default</string>
+    <string name="setting_ringtone_silent">silent</string>
+    <string name="setting_clear_dialog_message">"Sure to clear cache? All local mails will be removed after that</string>
+    <string name="setting_clearing">clearing……</string>
+    <string name="setting_clear_success">cleared successfully</string>
+    <string name="setting_clear_failed">cleared failed,please retry</string>
+    <string name="setting_editdialog_no_empty">Input cannot be null</string>
+    <string name="setting_about_logo">WeeMail</string>
+    <string name="setting_about_company1">三五互联\u0020\u0020\u0020版权所有</string>
+    <string name="setting_about_company2">CopyRight © 2012-2013 35.com</string>
+    <string name="setting_about_company3">All Right Reserved</string>
+    <string name="notice">Notice</string>
+    <string name="setting_language_notice">Are you sure to switch language?</string>
+    <string name="important_message">Important</string>
+    <string name="important_message_show_size">Important sender</string>
+    <string name="urgency_message">Emergency</string>
+    <string name="urgency_message_show_size">Emergency</string>
+    <string name="special_mailbox_name_attachment">Attachments</string>
+    <string name="attachmentlist_loadmore">Load more</string>
+    <string name="attachmentlist_loadingmore">Loading...</string>
+    <string name="attachmentlist_loading">Loading attachment, pleaser wait...</string>
+    <string name="attachmentlist_nonetwork">No network connection, cannot syncronize with server!</string>
+    <string name="attachmentlist_loadall">All attachments have been loaded!</string>
+    <string name="attachmentlist_fliter_pic">Picture</string>
+    <string name="attachmentlist_fliter_doc">Document</string>
+    <string name="attachmentlist_fliterall_title">Attachments (All)</string>
+    <string name="attachmentlist_fliterpic_title">Attachments (Picture)</string>
+    <string name="attachmentlist_fliterdoc_title">Attachments (Document)</string>
+    <string name="attachmentlist_nullonserver">No attachment under this account.</string>
+    <string name="attachmentlist_sync_finish">Syncronized attachment list successfully!</string>
+    <string name="attachmentlist_sync_fail">Failed to syncronize attachment list!</string>
+    <string name="send_failure_dialog_resend">Resend</string>
+    <string name="send_failure_dialog_send_later">"Send later"</string>
+    <string name="send_failure_dialog_prompt">Note</string>
+    <string name="send_failure_dialog_content">Failed to send, retry?</string>
+    <string name="failfast_title">failfast_tip</string>
+    <string name="dowload_email_error">Download mail error</string>
+    <string name="folderId_error">FolderId error</string>
+    <string name="sofia_environment_as_toast">35mail V2.0 account cannot support this function,pls contact us to update to 3.0.</string>
+    <string name="sofia_environment_thirdparty_toast"> this account cannot support this function,pls contact us to update to 3.0.</string>
+    <string name="commanderror_search_attach_list">Get list of attachments error</string>
+    <string name="commanderror_get_mailstatus">Get e-mail status error</string>
+    <string name="commanderror_commit_mailstatus">Submitted by mail state error</string>
+    <string name="command_response_error">Command returns the value of the error</string>
+    <string name="command_response_commit_mailstatus">Submitted by mail state error return value</string>
+    <string name="command_response_get_mailstatus">Get the message status return value error</string>
+    <string name="download_photo_error">Pictures fail to load</string>
+    <string name="download_attachment_error">Attachment failed to load</string>
+    <string name="logininfo_getalltheaccount">loading,please wait。</string>
+    <string name="logininfo_deletedata">loading,please wait..</string>
+    <string name="logininfo_synchronouscustomfolder">loading,please wait...</string>
+    <string name="logininfo_consolidatedaccount">loading,please wait....</string>
+    <string name="logininfo_enteringthemailinglist">loading,please wait.....</string>
+    <string name="status_load_finish">"Load Finished"</string>
+    <string name="audio_play">Play</string>
+    <string name="audio_stop">Stop</string>
+    <string name="press_say">"Holding to talk"</string>
+    <string name="release_end">"Loosen to stop"</string>
+    <string name="time_too_short">"time too short"</string>
+    <string name="add_cc_action">"Add Cc"</string>
+    <string name="delete_cc_action">"Delete Cc"</string>
+    <string name="mail_data"> %1$d of %2$d</string>
+    <string name="mail_save_data">saving traffic %1$s</string>
+    <!-- 封闭新增 -->
+    <string name="messagelist_item_deleted">Deleted</string>
+    <string name="messagelist_item_cancel">Cancel</string>
+    <string name="chart_title">Traffic Data</string>
+    <string name="chart_clear">remove</string>
+    <string name="chart_title_3g">Mobile Network</string>
+    <string name="chart_title_wifi">WLAN</string>
+    <string name="chart_info">Keeping WeeMail running in the backgroud allows it to receive mail instantly and consumes low data traffic.</string>
+    <string name="chart_system_str">system</string>
+    <string name="chart_app_str">WeeMail</string>
+    <string name="chart_month_str">month</string>
+    <string name="chart_distence">Latest 15 days</string>
+    <string name="up_cancel">Move up to cancel</string>
+    <string name="release_cancel">Release to cancel</string>
+    <string name="newmail">new mail</string>
+    <string name="messagelist_bottom_write">Compose</string>
+    <string name="tiyan35">Try 35mail</string>
+    <string name="login">Login</string>
+    <string name="toast_alert_delete_sendingmail">Mail sending ，cannot delele</string>
+    <string name="experience_reg_single_btn">Creat an account</string>
+    <string name="experience_reg_domain_btn">Create now</string>
+    <string name="message_none">this message may have been deleted .</string>
+    <string name="experience_reg_domain_over">Completed</string>
+
+    <!-- 2013.5.23增加,与企业联系人相关 -->
+    <string name="contacts_fetched">Chose</string>
+    <string name="contacts"></string>
+    <string name="all_contacts">All Contacts（%1$d）</string>
+    <string name="star_contacts">Frequent Contacts （%1$d）</string>
+    <string name="newmails">new mails</string>
+    <string name="readmail">have read</string>
+    <string name="peoples">... %1$d people</string>
+    <string name="notify">notice</string>
+    <!-- FetchContacts start -->
+    <string name="fetch_contact_default">contacts</string>
+    <string name="fetch_contact_notSupport">this account not support contacts</string>
+    <string name="fetch_contact_loading">Loading contacts&#8230;</string>
+    <string name="fetch_contact_loading_failed">Loading failed.</string>
+    <string name="fetch_contact_sync_failed">Refresh contacts failed.</string>
+    <string name="fetch_contact_sync_success">Refresh contacts succeed.</string>
+    <string name="fetch_contact_seach_no_result">No matching contacts.</string>
+    <!-- FetchContacts end -->
+    <string name="messagelist_readers_allunread">" All unread: "</string>
+    <string name="messagelist_readers_count">" read: "</string>
+    <string name="messagelist_readers_allread">" All read: "</string>
+    <string name="push_toast_content">%1$s has sent you a message（%2$s）</string>
+    <string name="form35mail">from WeeMail</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="ecllipsize_end">...</string>
+    <string name="errorcode">error code:</string>
+    <string name="send_read_Receipts">Send Read Receipts</string>
+    <string name="setting_failed">Setting failed, please try again</string>
+    <string name="file_not_exist_show_message">You are sending&#160;“%1$s”&#160;attachment does not exist, it is recommended to retry sending after uploading </string>
+
+    
+    <!-- 手势解锁 -->
+    
+    <string name="text_draw">Draw the unlock pattern</string>
+    <string name="text_draw_again">Draw the unlock pattern again</string>
+    <string name="text_draw_inconformity">Do not agree with the last drawing, please draw again</string>
+    
+    <string name="text_setup_complete">Setup complete</string>
+    
+    <string name="text_wrong_password">Password mistake, also can input %1$d times</string>
+    <string name="text_input_errors">Continuous input error, gesture unlock has been closed, please login again</string>
+    
+    <string name="text_notice">Notice</string>
+    <string name="text_forget_password">Forget gestures password, can enter the login password</string>
+    <string name="text_reLogin">Enter the login password</string>
+    <string name="text_cancel">Cancel</string>
+    
+    <string name="text_resume_load">At least connect %1$d points, please enter again</string>
+    
+    <string name="text_set_password">Password Settings gestures</string>
+    <string name="text_check_password">Password authentication gestures</string>
+    <string name="text_reset_gestures">Reset the gestures</string>
+    <string name="text_forget_gestures_password">Forget gestures password</string>
+    
+    <string name="text_draw_exit">Again according to exit the program</string>
+    <string name="delete_account_failed">Delete account db data error</string>
+    <string name="server_data_failed">Server data error</string>
+    
+    
+    
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <dimen name="updatebar_height">62dip</dimen>
+    <dimen name="updatebar_content_height">60dip</dimen>
+    <dimen name="updatebar_padding">10dip</dimen>
+    <dimen name="title_textsize">20sp</dimen>
+    <dimen name="fetch_contacts_selected_count_textsize">15sp</dimen>
+    <dimen name="title_marginleft">10dp</dimen>
+    <dimen name="messagelist_preview_textsize">13sp</dimen>
+    <dimen name="desktoplist_title_textsize">13dp</dimen>
+    <dimen name="desktoplist_preview_textsize">13dp</dimen>
+
+</resources>

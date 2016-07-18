@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 转发 -->
+    <item
+        android:id="@+id/forward"
+        android:title="@string/forward_action"/>
+    <!-- 回复 -->
+    <item
+        android:id="@+id/reply"
+        android:title="@string/reply_action"/>
+    <!-- 回复全部 -->
+    <item
+        android:id="@+id/reply_all"
+        android:title="@string/reply_all_action"/>
+    <!-- 删除 -->
+    <item
+        android:id="@+id/delete"
+        android:title="@string/delete_action"/>
+    <!-- 移动 -->
+    <item
+        android:id="@+id/move"
+        android:title="@string/move_action"/>
+    <!-- 选择 -->
+    <item
+        android:id="@+id/select"
+        android:title="@string/select_action"/>
+    <!-- 取消选择 -->
+    <item
+        android:id="@+id/deselect"
+        android:title="@string/deselect_action"/>
+
+    <!-- 从新发送 -->
+    <item
+        android:id="@+id/send_again"
+        android:title="@string/send_again_action"
+        android:visible="false"/>
+
+    <!-- 标记已读 -->
+    <item
+        android:id="@+id/mark_as_read"
+        android:title="@string/mark_as_read_action"
+        android:visible="false"/>
+
+    <!-- 标记未读 -->
+    <item
+        android:id="@+id/mark_as_unread"
+        android:title="@string/mark_as_unread_action"
+        android:visible="false"/>
+    <!-- 归档 -->
+    <item
+        android:id="@+id/archive"
+        android:title="@string/archive_action"
+        android:visible="false"/>
+
+    <!-- 复制 -->
+    <item
+        android:id="@+id/copy"
+        android:title="@string/copy_action"
+        android:visible="false"/>
+    <!-- 添加星标 -->
+    <item
+        android:id="@+id/flag"
+        android:title="@string/flag_action"
+        android:visible="false"/>
+    <!-- 取消星标 -->
+    <item
+        android:id="@+id/unflag"
+        android:title="@string/unflag_action"
+        android:visible="false"/>
+    <!-- 标记为垃圾 -->
+    <item
+        android:id="@+id/spam"
+        android:title="@string/spam_action"
+        android:visible="false"/>
+    <!-- 来自相同发送人的更多邮件 -->
+    <item
+        android:id="@+id/same_sender"
+        android:title="@string/from_same_sender"
+        android:visible="false"/>
+
+</menu>

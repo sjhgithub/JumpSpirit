@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dip"
+    android:paddingTop="5dip" >
+
+    <include layout="@layout/include_chatting_item_time" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chatting_item_time"
+        android:duplicateParentState="true"
+        android:orientation="horizontal" >
+
+		<include layout="@layout/include_chatting_item_head" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.5dp"
+            android:duplicateParentState="true"
+            android:orientation="vertical" >
+
+            <include layout="@layout/include_chatting_item_from_name_time" />
+
+            <RelativeLayout
+                style="@style/Chatting_layout_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/chatting_item_margin_right"
+                android:layout_marginTop="3dip"
+                android:duplicateParentState="true"
+                android:paddingBottom="2.3dip"
+                android:paddingLeft="6.5dip"
+                android:paddingRight="2.3dip"
+                android:paddingTop="2.3dip" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_chatting_attachment"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/iv_chatting_item_view"
+                        android:layout_width="53dip"
+                        android:layout_height="53dip"
+                        android:src="@drawable/icon_chatting_location" />
+
+                    <cn.mailchat.view.TextViewFixTouchConsume
+                        android:id="@+id/tv_chatting_item_location_name"
+                        style="@style/ChattingUIText"
+                        android:layout_marginLeft="8dip"
+                        android:layout_marginRight="10dip"
+                        android:ellipsize="end"
+                        android:maxLines="2" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

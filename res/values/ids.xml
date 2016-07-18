@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="dialog_confirm_delete" type="id"/>
+    <item name="dialog_confirm_spam" type="id"/>
+    <item name="dialog_attachment_progress" type="id"/>
+    <item name="dialog_account_setup_error" type="id"/>
+    <!-- 会话单条nameID -->
+    <item name="chatting_item_name" type="id"/>
+    <item name="txt_view_chatting_name" type="id"/>
+    <item name="chatting_item_time" type="id"/>
+    <!-- 会话音频 layout -->
+    <item name="layout_view_chatting_voice" type="id"></item>
+    <item name="txt_view_chatting_voice_size" type="id"></item>
+    <item name="pro_view_chatting_voice_size" type="id"></item>
+    <item name="img_view_chatting_voice_play" type="id"></item>
+    <!-- 会话图片layout -->
+    <item name="img_view_chatting_picture" type="id"></item>
+    <!-- 会话附件 -->
+    <item name="img_view_chatting_attachments_file_logo" type="id"></item>
+    <item name="txt_view_chatting_attachments_file_name" type="id"></item>
+    <item name="txt_view_chatting_attachments_file_size" type="id"></item>
+    <!-- 会话文本内容 -->
+    <item name="txt_view_chatting_content" type="id"></item>
+    
+    <item name="lv_view_muliple_select_user" type="id"/>
+    
+    <item name="address_lable_to" type="id">false</item>
+    <item name="address_lable_cc" type="id">false</item>
+    <item name="address_lable_bcc" type="id">false</item>
+    <item name="selected_view" type="id"/>
+
+    <item name="view_holder_key" type="id"/>
+    <item name="checkable_tag_key" type="id"/>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <GridView
+        android:id="@+id/fc_menu_gridview_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#bbbbbb"
+        android:verticalSpacing="1dip"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:padding="0dip"
+        android:layout_margin="0dip"
+        android:listSelector="@null" >
+    </GridView>
+
+    <GridView
+        android:id="@+id/fc_menu_gridview_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#bbbbbb"
+        android:verticalSpacing="1dip"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:padding="0dip"
+        android:layout_margin="0dip"
+        android:listSelector="@null" >
+    </GridView>
+
+</LinearLayout>

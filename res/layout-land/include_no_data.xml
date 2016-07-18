@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_list_watermark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/no_data_bg"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/no_chat"
+        android:layout_width="120dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="-5dp"
+        android:background="@drawable/icon_no_chat_list_conent"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="@string/initiate_chat"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/empty_mail_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="@string/empty_mail_list"
+        android:textColor="#2EA8E6"
+        android:textSize="12sp" />
+
+</LinearLayout>

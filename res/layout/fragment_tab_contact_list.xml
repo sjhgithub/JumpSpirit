@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/search_result_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:focusable="true"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layout_contat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/slide_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" >
+
+            <cn.mailchat.view.SlideSelectView
+                android:id="@+id/llv_view_muliple_select_user"
+                android:layout_width="15dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:background="@drawable/slide_select_bg"
+                android:text="@string/slide_select_content"
+                android:textColor="#aaaaaa"
+                android:textSize="10sp"
+                app:min_line_interval="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/slide_layout"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <include layout="@layout/include_search_contact_address_view" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_view_muliple_select_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout"
+            android:layout_toLeftOf="@id/slide_layout"
+            android:background="@android:color/white"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:dividerHeight="0dip"
+            android:drawSelectorOnTop="true"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:listSelector="#00000000"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <FrameLayout
+            android:id="@+id/slide_frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" >
+
+            <cn.mailchat.view.RoundImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#BB000000"
+                android:gravity="center"
+                android:maxHeight="70dip"
+                android:minWidth="70dip"
+                android:padding="10dip"
+                android:textColor="#99FFFFFF"
+                app:round_view_radius="3dp" />
+
+            <TextView
+                android:id="@+id/slide_select_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxHeight="70dip"
+                android:minWidth="70dip"
+                android:textColor="@color/white"
+                android:textSize="50sp" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

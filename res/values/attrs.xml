@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="K9Styles">
+        <attr name="iconFolder" format="reference" />
+        <attr name="iconListItemMenu" format="reference" />
+        <attr name="iconMenuInfoDetails" format="reference" />
+        <attr name="iconActionAddAttachment" format="reference" />
+        <attr name="iconActionAddCcBcc" format="reference" />
+        <attr name="iconActionArchive" format="reference" />
+        <attr name="iconActionCompose" format="reference" />
+        <attr name="iconActionDelete" format="reference" />
+        <attr name="iconActionMove" format="reference" />
+        <attr name="iconActionCopy" format="reference" />
+        <attr name="iconActionNextMessage" format="reference" />
+        <attr name="iconActionPreviousMessage" format="reference" />
+        <attr name="iconActionRefresh" format="reference" />
+        <attr name="iconActionSearch" format="reference" />
+        <attr name="iconActionSearchFolder" format="reference" />
+        <attr name="iconActionSend" format="reference" />
+        <attr name="iconActionSettings" format="reference" />
+        <attr name="iconActionSingleMessageOptions" format="reference" />
+        <attr name="iconActionSort" format="reference" />
+        <attr name="iconActionSpam" format="reference" />
+        <attr name="iconActionFlag" format="reference" />
+        <attr name="iconActionUnflag" format="reference" />
+        <attr name="iconActionMarkAsRead" format="reference" />
+        <attr name="iconActionMarkAsUnread" format="reference" />
+        <attr name="iconActionRemoteSearch" format="reference" />
+        <attr name="iconActionAbout" format="reference" />
+        <attr name="iconActionAdd" format="reference" />
+        <attr name="iconActionImportExport" format="reference" />
+        <attr name="iconActionUpload" format="reference" />
+        <attr name="iconActionSelectAll" format="reference" />
+        <attr name="iconActionSave" format="reference" />
+        <attr name="iconActionCancel" format="reference" />
+        <attr name="iconActionRequestReadReceipt" format="reference" />
+        <attr name="iconActionExpand" format="reference" />
+        <attr name="iconActionCollapse" format="reference" />
+        <attr name="textColorPrimaryRecipientDropdown" format="reference" />
+        <attr name="textColorSecondaryRecipientDropdown" format="reference" />
+        <attr name="backgroundColorChooseAccountHeader" format="color" />
+        <attr name="messageListSelectedBackgroundColor" format="reference|color" />
+        <attr name="messageListReadItemBackgroundColor" format="reference|color" />
+        <attr name="messageListUnreadItemBackgroundColor" format="reference|color" />
+        <attr name="messageListThreadCountForegroundColor" format="reference|color" />
+        <attr name="messageListThreadCountBackground" format="reference|color" />
+        <attr name="messageListActiveItemBackgroundColor" format="reference|color" />
+        <attr name="messageListDividerColor" format="reference|color" />
+        <attr name="messageListCheckbox" format="reference" />
+        <attr name="messageViewHeaderBackgroundColor" format="reference|color" />
+        <attr name="messageViewAttachmentBackground" format="reference" />
+        <attr name="messageComposeAddContactImage" format="reference" />
+        <attr name="composerBackgroundColor" format="color" />
+        <attr name="compatDividerVertical" format="reference" />
+        <attr name="compatSelectableItemBackground" format="reference" />
+        <attr name="contactPictureFallbackDefaultBackgroundColor" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="SliderPreference">
+        <attr name="android:summary" />
+    </declare-styleable>
+    <declare-styleable name="FoldableLinearLayout">
+        <attr name="foldedLabel" format="string" />
+        <attr name="unFoldedLabel" format="string" />
+    </declare-styleable>
+    <declare-styleable name="SlideSelectView">
+        <attr name="min_line_interval" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="RoundCornerView">
+        <attr name="round_view_radius" format="dimension">
+            <flag name="abs_round" value="-1" />
+        </attr>
+        <attr name="round_view_radius_pixel_open" format="boolean"/>
+        <attr name="round_view_radius_pixel" format="dimension"/>
+    </declare-styleable>
+    <!-- PagerSlidingTabStrip attr -->
+    <declare-styleable name="PagerSlidingTabStrip">
+
+        <!-- 指示器的颜色 -->
+        <attr name="pstsIndicatorColor" format="color" />
+        <!-- Tab下划线的颜色 -->
+        <attr name="pstsUnderlineColor" format="color" />
+        <!-- tab之间分割线的颜色 -->
+        <attr name="pstsDividerColor" format="color" />
+        <!-- 实施期的高度 -->
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <!-- tab下划线的高度 -->
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <!-- tab分割线的间距 -->
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+        <attr name="pstsSelectedTabTextColor" format="color" />
+        <!-- Color of regular titles. -->
+        <attr name="android:textColor" />
+        <!-- Size of title text. -->
+        <attr name="android:textSize" />
+    </declare-styleable>
+    <!-- Defines the custom XML attributes supported for a HorizontalListView -->
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+        <!-- Defines the custom XML attributes supported for a WebViewWithErrorView -->
+    </declare-styleable>
+    <declare-styleable name="wv">
+        <attr name="allow_content_access" format="boolean" />
+        <attr name="allow_file_access" format="boolean" />
+        <attr name="allow_file_access_from_file_urls" format="boolean" />
+        <attr name="allow_universal_access_from_file_urls" format="boolean" />
+        <attr name="app_cache_enabled" format="boolean" />
+        <attr name="block_network_image" format="boolean" />
+        <attr name="block_network_loads" format="boolean" />
+        <attr name="geolocation_enabled" format="boolean" />
+        <attr name="java_script_can_open_windows_automatically" format="boolean" />
+        <attr name="loads_images_automatically" format="boolean" />
+        <attr name="media_playback_requires_user_gesture" format="boolean" />
+        <attr name="support_multiple_windows" format="boolean" />
+        <attr name="java_script_enabled" format="boolean" />
+        <attr name="dom_storage_enabled" format="boolean" />
+        <attr name="database_enabled" format="boolean" />
+        <attr name="save_form_data" format="boolean" />
+        <attr name="cache_mode">
+            <enum name="load_default" value="-1" />
+        </attr>
+        <attr name="need_initial_focus" format="boolean" />
+        <attr name="built_in_zoom_controls" format="boolean" />
+        <attr name="display_zoom_controls" format="boolean" />
+        <attr name="support_zoom" format="boolean" />
+        <attr name="use_wide_view_port" format="boolean" />
+        <attr name="load_with_overview_mode" format="boolean" />
+        <attr name="scroll_bar_style">
+            <enum name="scrollbars_inside_overlay" value="0" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ProgressView">
+        <attr name="progressLoadingStateProgressBarWidth" format="dimension" />
+        <attr name="progressLoadingStateProgressBarHeight" format="dimension" />
+        <attr name="progressLoadingStateBackgroundColor" format="color" />
+        <attr name="progressEmptyStateImageWidth" format="dimension" />
+        <attr name="progressEmptyStateImageHeight" format="dimension" />
+        <attr name="progressEmptyStateTitleTextSize" format="dimension" />
+        <attr name="progressEmptyStateContentTextSize" format="dimension" />
+        <attr name="progressEmptyStateTitleTextColor" format="color" />
+        <attr name="progressEmptyStateContentTextColor" format="color" />
+        <attr name="progressEmptyStateBackgroundColor" format="color" />
+        <attr name="progressErrorStateImageWidth" format="dimension" />
+        <attr name="progressErrorStateImageHeight" format="dimension" />
+        <attr name="progressErrorStateTitleTextSize" format="dimension" />
+        <attr name="progressErrorStateContentTextSize" format="dimension" />
+        <attr name="progressErrorStateTitleTextColor" format="color" />
+        <attr name="progressErrorStateContentTextColor" format="color" />
+        <attr name="progressErrorStateButtonTextColor" format="color" />
+        <attr name="progressErrorStateBackgroundColor" format="color" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_chat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:duplicateParentState="true"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/layout_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="15.0dp"
+            android:paddingRight="8.0dp">
+
+            <cn.mailchat.view.RoundImageView
+                android:id="@+id/logo_img"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/icon_image_bg"
+                android:contentDescription="@null"
+                app:round_view_radius="3dp" />
+            <ImageView
+                android:id="@+id/logo_chat_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_chat_prompt"
+                android:layout_marginLeft="42dp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="15.0dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="7dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txt_chat_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/txt_chat_time"
+                    android:layout_marginRight="2dp"
+                    android:duplicateParentState="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/message_title_view_sub_black"
+                    android:textSize="16sp"/>
+	            <!-- 收信时间 -->
+
+                <TextView
+                    android:id="@+id/txt_chat_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/txt_chat_name"
+                    android:layout_alignBottom="@id/txt_chat_name"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_gray"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+				<!-- 图标舍弃，直接使用文字 -->
+                <ImageView
+                    android:id="@+id/img_chat_sending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/chat_list_sending"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/txt_chat_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center|left"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_gray"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="@dimen/back_from_left2"
+        android:layout_marginRight="@dimen/back_from_left2"
+        android:background="@drawable/gray" />
+
+</LinearLayout>

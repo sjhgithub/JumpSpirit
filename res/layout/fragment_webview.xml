@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <cn.mailchat.view.webview.WebViewContainerView
+        android:id="@+id/webview_error_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:allow_file_access="true"
+        app:app_cache_enabled="false"
+        app:built_in_zoom_controls="true"
+        app:display_zoom_controls="false"
+        app:dom_storage_enabled="true"
+        app:java_script_enabled="true"
+        app:load_with_overview_mode="true"
+        app:loads_images_automatically="true"
+        app:support_zoom="true"
+        app:use_wide_view_port="true" />
+
+</LinearLayout>

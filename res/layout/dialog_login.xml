@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/bg_chatting_dialog"
+    android:minWidth="280dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/login_fail_dialog_prompt"
+        android:textColor="@color/bg_title_right_txt"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:gravity="center|left"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center|left"
+            android:lineSpacingExtra="2dip"
+            android:maxWidth="240dip"
+            android:text="@string/login_fail_dialog_tv_title"
+            android:textColor="#555555"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dip" >
+
+            <TextView
+                android:id="@+id/login_fail_dialog_tv_content_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:lineSpacingExtra="2dip"
+                android:maxWidth="240dip"
+                android:text="@string/login_fail_dialog_tv_content_1"
+                android:textColor="#555555"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/login_fail_dialog_tv_content_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="4dip"
+            android:gravity="center|left"
+            android:lineSpacingExtra="2dip"
+            android:maxWidth="240dip"
+            android:text="@string/login_fail_dialog_tv_content_2"
+            android:textColor="#555555"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/login_fail_dialog_tv_content_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="4dip"
+            android:gravity="center|left"
+            android:lineSpacingExtra="2dip"
+            android:maxWidth="240dip"
+            android:text="@string/login_fail_dialog_tv_content_3"
+            android:textColor="#555555"
+            android:textSize="16sp" />
+        
+        <TextView
+            android:id="@+id/login_fail_dialog_exception"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="4dip"
+            android:gravity="center|left"
+            android:lineSpacingExtra="2dip"
+            android:maxWidth="240dip"
+            android:textColor="#555555"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/positiveButtonLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/bg_bottom_dialog"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="0.5dip"
+            android:layout_weight="1"
+            android:background="@drawable/selecter_btn_dialog_left"
+            android:text="@string/okay_action"
+            android:textColor="@color/light_blue"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/negativeButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="0.5dip"
+            android:layout_marginTop="0.5dip"
+            android:layout_weight="1"
+            android:background="@drawable/selecter_btn_dialog"
+            android:text="@string/cancel_action"
+            android:textColor="@color/text_grey"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/third_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginTop="0.5dip"
+            android:layout_weight="1"
+            android:background="@drawable/selecter_btn_dialog_right"
+            android:text="@string/cancel_action"
+            android:textColor="@color/text_grey"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:scrollbarStyle="outsideOverlay" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 收件人栏 -->
+
+                <include
+                    android:id="@+id/compose_header"
+                    layout="@layout/include_compose_header" />
+
+                <!-- 主题栏 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/title_height"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/message_compose_edit_height"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/message_compose_subject_hint"
+                        android:textColor="@color/text_grey"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/message_compose_edit_height"
+                        android:background="@null"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textEmailSubject|textAutoCorrect|textCapSentences|textImeMultiLine"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="@dimen/message_compose_edit_height"
+                    android:layout_marginRight="@dimen/message_compose_edit_height"
+                    android:background="@drawable/gray" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" >
+
+                    <GridLayout
+                        android:id="@+id/attachments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/message_compose_edit_height"
+                        android:layout_marginRight="@dimen/message_compose_edit_height"
+                        android:layout_marginTop="5dp"
+                        android:useDefaultMargins="true" />
+                    <!-- 正文栏 -->
+
+                    <EditText
+                        android:id="@+id/message_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/attachments"
+                        android:layout_marginLeft="@dimen/message_compose_edit_height"
+                        android:layout_marginRight="@dimen/message_compose_edit_height"
+                        android:background="@null"
+                        android:gravity="left|top"
+                        android:hint="@string/message_compose_body_hint"
+                        android:imeOptions="flagNoEnterAction"
+                        android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                        android:minHeight="135dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+					<!-- 签名 -->
+                    <EditText
+                        android:id="@+id/et_signature"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/message_content"
+                        android:layout_marginLeft="@dimen/message_compose_edit_height"
+                        android:layout_marginRight="@dimen/message_compose_edit_height"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="@string/message_compose_signature_hint"
+                        android:inputType="textMultiLine|textAutoCorrect|text"
+                        android:minLines="0"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:visibility="gone" />
+
+                    <!-- 回复等引用 -->
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout_cite_edit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/et_signature"
+                        android:layout_marginLeft="@dimen/message_compose_edit_height"
+                        android:layout_marginRight="@dimen/message_compose_edit_height"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <View
+                            android:id="@+id/message_content_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:background="@drawable/gray" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="40dp"
+                            android:orientation="horizontal" >
+
+                            <CheckBox
+                                android:id="@+id/checkbox_cite_original"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:button="@null"
+                                android:checked="true"
+                                android:drawableLeft="@drawable/checkbox_style"
+                                android:gravity="center"
+                                android:text="@string/quote_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_edit_original"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/respond_inline"
+                                android:textColor="@color/light_blue"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:background="@drawable/gray" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <cn.mailchat.view.MessageViewWebView
+                    android:id="@+id/webview_msgview_body"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/message_compose_edit_height"
+                    android:layout_marginRight="@dimen/message_compose_edit_height"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/et_original_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/message_compose_edit_height"
+                    android:layout_marginRight="@dimen/message_compose_edit_height"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:id="@+id/compose_empty_view"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- 默认布局部分 -->
+
+    <LinearLayout
+        android:id="@+id/compose_bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dip"
+            android:layout_marginRight="15dip"
+            android:background="@drawable/upload_attachment_bg"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <CheckBox
+                android:id="@+id/checkbox_upload_attachment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:checked="false"
+                android:drawableLeft="@drawable/selector_compose_upload"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_attachment"
+            android:layout_width="fill_parent"
+            android:layout_height="75dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/gray" />
+
+            <LinearLayout
+                android:id="@+id/layoutCommon"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <!-- 拍照 -->
+
+                <RelativeLayout
+                    android:id="@+id/llMessageComposeBottomTakePictures"
+                    style="@style/message_compose_bg_bottom_btn" >
+
+                    <ImageView
+                        android:id="@+id/ivMessageComposeBottomTakePictures"
+                        style="@style/message_compose_img_bottom_btn"
+                        android:layout_below="@id/ivMessageComposeBottomTakePictures"
+                        android:src="@drawable/ic_bottom_takepicture" />
+
+                    <TextView
+                        android:id="@+id/tvMessageComposeBottomTakePictures"
+                        style="@style/message_compose_text_bottom_btn"
+                        android:layout_below="@id/ivMessageComposeBottomTakePictures"
+                        android:text="@string/message_compose_bottom_btn_camera" />
+                </RelativeLayout>
+
+                <!-- 相册 -->
+
+                <RelativeLayout
+                    android:id="@+id/llMessageComposeBottomAlbum"
+                    style="@style/message_compose_bg_bottom_btn" >
+
+                    <ImageView
+                        android:id="@+id/ivMessageComposeBottomAlbum"
+                        style="@style/message_compose_img_bottom_btn"
+                        android:src="@drawable/ic_bottom_pickpicture" />
+
+                    <TextView
+                        android:id="@+id/tvMessageComposeBottomAlbum"
+                        style="@style/message_compose_text_bottom_btn"
+                        android:layout_below="@id/ivMessageComposeBottomAlbum"
+                        android:text="@string/message_compose_bottom_btn_albums" />
+                </RelativeLayout>
+
+                <!-- 文件 -->
+
+                <RelativeLayout
+                    android:id="@+id/llMessageComposeBottomFile"
+                    style="@style/message_compose_bg_bottom_btn" >
+
+                    <ImageView
+                        android:id="@+id/ivMessageComposeBottomFile"
+                        style="@style/message_compose_img_bottom_btn"
+                        android:src="@drawable/ic_bottom_filepick" />
+
+                    <TextView
+                        android:id="@+id/tvMessageComposeBottomFile"
+                        style="@style/message_compose_text_bottom_btn"
+                        android:layout_below="@id/ivMessageComposeBottomFile"
+                        android:text="@string/message_compose_bottom_btn_Files" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

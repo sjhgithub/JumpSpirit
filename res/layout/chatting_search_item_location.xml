@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_chatting_show_dialog"
+    android:paddingBottom="5dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="5dip" >
+
+    <TextView
+        android:id="@+id/tv_chatting_search_item_member_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dip"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/iv_chatting_search_item_location_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_chatting_search_item_member_name"
+        android:layout_below="@id/tv_chatting_search_item_member_name"
+        android:layout_marginBottom="3dip"
+        android:layout_marginTop="3dip"
+        android:src="@drawable/icon_location" />
+
+    <TextView
+        android:id="@+id/tv_chatting_search_item_location_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_chatting_search_item_member_name"
+        android:layout_marginLeft="15dip"
+        android:layout_toRightOf="@id/iv_chatting_search_item_location_icon"
+        android:gravity="center_vertical"
+        android:text="Beijing" />
+
+    <TextView
+        android:id="@+id/tv_chatting_search_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_chatting_search_item_member_name"
+        android:layout_alignParentRight="true"
+        android:layout_margin="2dip"
+        android:gravity="center_vertical"
+        android:textColor="@color/bg_group_set_txt" />
+
+</RelativeLayout>

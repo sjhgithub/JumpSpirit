@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false"
+    android:variablePadding="true" >
+
+    <item android:duration="150">
+        <clip
+            android:drawable="@drawable/loadrefresh1"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="150">
+        <clip
+            android:drawable="@drawable/loadrefresh2"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="150">
+        <clip
+            android:drawable="@drawable/loadrefresh3"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="150">
+        <clip
+            android:drawable="@drawable/loadrefresh4"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="150">
+        <clip
+            android:drawable="@drawable/loadrefresh5"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="150">
+        <clip
+            android:drawable="@drawable/loadrefresh6"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="150">
+        <clip
+            android:drawable="@drawable/loadrefresh7"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="150">
+        <clip
+            android:drawable="@drawable/loadrefresh8"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="150">
+        <clip
+            android:drawable="@drawable/loadrefresh9"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="150">
+        <clip
+            android:drawable="@drawable/loadrefresh10"
+            android:gravity="center" >
+        </clip>
+    </item>
+
+</animation-list>

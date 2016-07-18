@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_bg_list_item"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/muliple_select_user_item_tag"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="15.0dip"
+        android:shadowColor="#ffffffff"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:textColor="#ff555555"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layoutView_group"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" >
+
+        <include layout="@layout/item_message_list_header" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_select_top_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginBottom="5dip"
+        android:background="@drawable/gray"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/muliple_select_user_item_Ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <!-- android:layout_height="53.666dip" -->
+
+        <RelativeLayout
+            android:id="@+id/muliple_select_user_item_Ll_sssss"
+            android:layout_width="0dip"
+            android:layout_height="53.666dip"
+            android:layout_weight="1"
+            android:duplicateParentState="true"
+            android:paddingLeft="13.3dip"
+            android:paddingRight="30.0dip" >
+
+            <cn.mailchat.view.RoundImageView
+                android:id="@+id/contact_img_head"
+                android:layout_width="36dip"
+                android:layout_height="36dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="1dip"
+                android:background="@drawable/icon_image_bg"
+                android:contentDescription="@null"
+                android:visibility="gone"
+                app:round_view_radius="2dp" />
+
+            <CheckBox
+                android:id="@+id/muliple_select_user_item_cb"
+                android:layout_width="16dip"
+                android:layout_height="16dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8.0dip"
+                android:background="@drawable/selector_checkbox"
+                android:button="@null"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/linerLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/muliple_select_user_item_cb"
+                android:layout_toRightOf="@id/contact_img_head"
+                android:duplicateParentState="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvView_user_name_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:ellipsize="middle"
+                    android:singleLine="true"
+                    android:textColor="#010101"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvView_user_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:ellipsize="middle"
+                    android:singleLine="true"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tvView_inviter_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:textColor="@color/group_blue"
+            android:textSize="12sp"
+            android:text="@string/group_member_invite"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/lvView_del_member"
+            android:layout_width="53.3333dip"
+            android:layout_height="fill_parent"
+            android:scaleType="center"
+            android:src="@drawable/selector_btn_del_member"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvView_del_member"
+            android:layout_width="53.3333dip"
+            android:layout_height="26.6666dip"
+            android:background="@drawable/selector_bg_del_member"
+            android:gravity="center"
+            android:text="@string/remove_member"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_select_bottom_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="13.3dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/gray"
+        android:visibility="gone" />
+
+</LinearLayout>

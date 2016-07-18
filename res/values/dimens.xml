@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <dimen name="updatebar_height">62dip</dimen>
+    <dimen name="updatebar_content_height">60dip</dimen>
+    <dimen name="updatebar_padding">10dip</dimen>
+    <dimen name="fetch_contacts_selected_count_textsize">15sp</dimen>
+    <dimen name="title_marginleft">10dp</dimen>
+    <dimen name="messagelist_preview_textsize">13sp</dimen>
+    <dimen name="desktoplist_title_textsize">13dp</dimen>
+    <dimen name="desktoplist_preview_textsize">13dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="chatting_item_width">270dip</dimen>
+
+    <!-- 创建群聊页面需要用到的dimens -->
+    <dimen name="chat_subject_height">45dip</dimen>
+    <dimen name="chat_description_height">45dip</dimen>
+    <dimen name="chat_contacts_height">45.33333dip</dimen>
+    <dimen name="chat_content_layout_top">50dip</dimen>
+    <dimen name="default_spacing">10dip</dimen>
+    <dimen name="chat_listview_layout_top">105dip</dimen>
+    <!-- 等于  chat_title_height+chat_subject_height+default_spacing -->
+    <!-- 群聊item居左居右距离 -->
+    <dimen name="chatting_item_margin_right">60dip</dimen>
+    <dimen name="chatting_item_margin_left">46.7dip</dimen>
+    <dimen name="title_bottom_line">0.5dip</dimen>
+
+    <!-- 标题栏高度 -->
+    <dimen name="title_height">48dip</dimen>
+    <!-- 标题大小 -->
+    <dimen name="title_textsize">17.3sp</dimen>
+    <!-- 标题栏返回按钮离左边距离 -->
+    <dimen name="back_from_left">15dip</dimen>
+    <dimen name="back_from_left2">9dip</dimen>
+    <!-- 返回按钮的宽度 -->
+    <dimen name="layout_back">46.7dip</dimen>
+    <dimen name="messageview_reciever">11sp</dimen>
+    <dimen name="message_compose_edit_height">12dp</dimen>
+    <!-- infosetActivity -->
+    <dimen name="bottom_padding_top">8dip</dimen>
+    <dimen name="bottom_padding_left">40dip</dimen>
+    <dimen name="bottom_padding_right">40dip</dimen>
+    <dimen name="bottom_padding_buttom">8dip</dimen>
+    <dimen name="edittext_size">20sp</dimen>
+    <dimen name="button_size">16sp</dimen>
+    <dimen name="button_height">48dp</dimen>
+    
+    <dimen name="contact_list_line_panding_left">13dp</dimen> 
+	<!-- 单聊设置线 -->
+    <dimen name="title_bottom_line_im">1dip</dimen>
+    <!-- 主页呼出菜单按钮-->
+     <dimen name="ldrawer_drawableSize">50dp</dimen>
+    <dimen name="ldrawer_barSize">18dp</dimen>
+    <dimen name="ldrawer_topBottomBarArrowSize">11dp</dimen>
+    <dimen name="ldrawer_thickness">1dp</dimen>
+    <dimen name="ldrawer_gapBetweenBars">6dp</dimen>
+    <dimen name="ldrawer_middleBarArrowSize">20dp</dimen>
+    <dimen name="nodata_pading_top">5dp</dimen>
+    <dimen name="refresh_padding_top">10dp</dimen>
+    <dimen name="global_dialog_padding">15.0dip</dimen>
+</resources>

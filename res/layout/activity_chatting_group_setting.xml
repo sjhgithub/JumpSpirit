@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layoutView_group_name"
+                android:layout_width="fill_parent"
+                android:layout_height="50.666dip"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:paddingLeft="13.333dip"
+                android:paddingRight="13.333dip" >
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:duplicateParentState="true"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/group_set_gname"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtView_group_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="13.333dip"
+                    android:layout_marginRight="2dip"
+                    android:layout_toRightOf="@id/text_name"
+                    android:layout_toLeftOf="@+id/img_group_name_edit"
+                    android:duplicateParentState="true"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/bg_group_set_txt"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/img_group_name_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_edit"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="13.333dip"
+                android:layout_marginRight="0.5dip"
+                android:background="@drawable/bg_attachment_child_list_divider" />
+
+            <RelativeLayout
+                android:id="@+id/layout_view_group_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:minHeight="50.666dip"
+                android:padding="13.333dip" >
+
+                <TextView
+                    android:id="@+id/text_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:duplicateParentState="true"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/group_set_gdesc"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_view_group_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="13.333dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toRightOf="@id/text_desc"
+                    android:duplicateParentState="true"
+                    android:text="无"
+                    android:textColor="@color/bg_group_set_txt"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="13.333dip"
+                android:layout_marginRight="1dip"
+                android:background="@drawable/bg_attachment_child_list_divider" />
+
+            <RelativeLayout
+                android:id="@+id/layout_view_search_group_chat"
+                android:layout_width="fill_parent"
+                android:layout_height="68dip"
+                android:clickable="true"
+                android:paddingLeft="13.333dip"
+                android:paddingRight="13.333dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:paddingTop="16.666dp"
+                    android:text="@string/group_set_gfind_chat"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@drawable/bg_attachment_child_list_divider" />
+
+            <RelativeLayout
+                android:id="@+id/layoutView_find_member"
+                android:layout_width="fill_parent"
+                android:layout_height="68dip"
+                android:orientation="vertical"
+                android:paddingLeft="13.333dip" >
+
+                <TextView
+                    android:id="@+id/textView_find_member"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:duplicateParentState="true"
+                    android:paddingTop="8.666dp"
+                    android:text="@string/group_set_gfind_member"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtView_members"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textView_find_member"
+                    android:layout_toLeftOf="@+id/imgeView_add_member"
+                    android:duplicateParentState="true"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:textColor="@color/bg_group_set_txt"
+                    android:textSize="13.333sp" />
+
+                <ImageView
+                    android:id="@+id/imgeView_add_member"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/selector_bg_add_member"
+                    android:padding="20dp"
+                    android:src="@drawable/btn_add_member_icon" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.666dp"
+                    android:layout_toLeftOf="@id/imgeView_add_member"
+                    android:src="@drawable/icon_line_v" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@drawable/bg_attachment_child_list_divider" />
+
+            <RelativeLayout
+                android:id="@+id/layoutView_msg_alert"
+                android:layout_width="fill_parent"
+                android:layout_height="50.666dip"
+                android:clickable="true"
+                android:paddingLeft="13.333dip"
+                android:paddingRight="13.333dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/group_set_gmessage"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+                
+                <CheckBox
+                    android:id="@+id/ivView_msg_alert"
+                    style="@style/setting_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="13.333dip"
+                android:background="@drawable/bg_attachment_child_list_divider" />
+
+            <!-- <RelativeLayout
+                android:id="@+id/layoutView_msg_voiceReminder"
+                android:layout_width="fill_parent"
+                android:layout_height="50.666dip"
+                android:clickable="true"
+                android:paddingLeft="13.333dip"
+                android:paddingRight="13.333dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:duplicateParentState="true"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/group_set_voiceReminder"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivView_msg_voiceReminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_open" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="13.333dip"
+                android:background="@drawable/bg_attachment_child_list_divider" /> -->
+
+            <RelativeLayout
+                android:id="@+id/layoutView_stick_operate"
+                android:layout_width="fill_parent"
+                android:layout_height="50.666dip"
+                android:clickable="true"
+                android:paddingLeft="13.333dip"
+                android:paddingRight="13.333dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/group_set_gtop"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+                
+                <CheckBox
+                    android:id="@+id/ivView_stick_operate"
+                    style="@style/setting_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="13.333dip"
+                android:background="@drawable/bg_attachment_child_list_divider" />
+
+            <TextView
+                android:id="@+id/group_msg_all_clean"
+                android:layout_width="match_parent"
+                android:layout_height="50.666dip"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="13.333dip"
+                android:paddingRight="13.333dip"
+                android:text="@string/chat_message_all_clean"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/main_del_message_ly"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginBottom="20.666dip"
+                android:layout_marginLeft="13dip"
+                android:layout_marginRight="13dip"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/selector_del_group"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/group_set_gdelAndExit"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

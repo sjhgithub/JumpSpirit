@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<integer name="anim_duration">300</integer>
+	<integer name="popupWindowSize">480</integer>
+	<integer name="batch_popwindow">100</integer>
+	<integer name="message_filter_popwindow">200</integer>
+	<integer name="folderlist_set_foldername">1</integer>
+	<integer name="folderlist_set_folderid">2</integer>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dip"
+    android:paddingTop="5dip" >
+
+    <include layout="@layout/include_chatting_item_time" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chatting_item_time"
+        android:duplicateParentState="true"
+        android:orientation="horizontal">
+
+		<include layout="@layout/include_chatting_item_head" />
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:duplicateParentState="true"
+	        android:layout_marginLeft="8.5dp"
+	        android:orientation="vertical">
+
+	        <include layout="@layout/include_chatting_item_from_name_time" />
+
+	        <LinearLayout
+	            android:id="@+id/from_text_container"
+	            style="@style/Chatting_layout_from"
+	            android:layout_marginTop="3dip"
+	            android:duplicateParentState="true"
+	            android:orientation="horizontal">
+
+	            <cn.mailchat.view.TextViewFixTouchConsume
+	                android:id="@id/txt_view_chatting_content"
+	                style="@style/ChattingUIText"
+	                android:padding="10dip"
+	                android:duplicateParentState="true" />
+	        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

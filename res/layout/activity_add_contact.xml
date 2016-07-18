@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/layout_title_bar"
+        layout="@layout/custom_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dip"
+            android:layout_marginRight="13dip"
+            android:orientation="vertical"
+            android:paddingBottom="20dp" >
+
+            <!-- 姓名 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:minHeight="43dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/layout_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/info_set_nickname"
+                        android:textColor="@color/text_grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|right"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/layout_name2"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/info_set_nickname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_n"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|bottom"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                        android:maxLength="36"
+                        android:paddingBottom="5dip"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="5dip"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- 电子邮箱 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:minHeight="43dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/layout_email2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/info_setting_email"
+                        android:textColor="@color/text_grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|right"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/layout_email2"
+                    android:orientation="horizontal" >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/info_set_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_n"
+                        android:completionThreshold="1"
+                        android:dropDownHeight="200dip"
+                        android:dropDownVerticalOffset="0dip"
+                        android:focusable="true"
+                        android:gravity="left|bottom"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="50"
+                        android:paddingBottom="5dip"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="5dip"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- 电话 -->
+
+            <cn.mailchat.view.NoScrollListView
+                android:id="@+id/listView_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:divider="@color/transparent"
+                android:dividerHeight="0dp"
+                android:overScrollMode="never"
+                android:scrollbars="none" >
+            </cn.mailchat.view.NoScrollListView>
+            <!-- 添加电话 -->
+
+            <LinearLayout
+                android:id="@+id/layout_add_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="3dip"
+                android:layout_marginTop="3dip"
+                android:background="@drawable/selector_set_bg_add_account_layout"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_add_contact_phone"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/contact_add_phone"
+                    android:textColor="@color/light_blue"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_gravity="left"
+                android:gravity="left|center_vertical"
+                android:text="@string/contact_add_tip"
+                android:textColor="@color/chat_down"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_gravity="bottom"
+                android:background="@color/title_line" />
+            <!-- 公司 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:minHeight="43dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/layout_company2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/info_set_company"
+                        android:textColor="@color/text_grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|right"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/layout_company2"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/info_set_company"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_n"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|bottom"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                        android:maxLength="100"
+                        android:paddingBottom="5dip"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="5dip"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- 部门 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_department"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:minHeight="43dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/layout_department2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/info_set_department"
+                        android:textColor="@color/text_grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|right"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/layout_department2"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/info_set_department"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_n"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|bottom"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                        android:maxLength="100"
+                        android:paddingBottom="5dip"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="5dip"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- 职位 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:minHeight="43dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/layout_position2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/info_set_position"
+                        android:textColor="@color/text_grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|right"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/layout_position2"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/info_set_position"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_n"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|bottom"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                        android:maxLength="50"
+                        android:paddingBottom="5dip"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="5dip"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- 地址 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:minHeight="43dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/layout_address2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/contact_address"
+                        android:textColor="@color/text_grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|right"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/layout_address2"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/info_set_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_n"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|bottom"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                        android:maxLength="100"
+                        android:paddingBottom="5dip"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="5dip"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- 其他 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:minHeight="43dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/layout_other2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/contact_other"
+                        android:textColor="@color/text_grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|right"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/layout_other2"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/info_set_other"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_n"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|bottom"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                        android:maxLength="500"
+                        android:paddingBottom="5dip"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="5dip"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_delete_contact"
+                style="@style/style_button_green"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/selector_del_group"
+                android:gravity="center"
+                android:text="@string/del_contact"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

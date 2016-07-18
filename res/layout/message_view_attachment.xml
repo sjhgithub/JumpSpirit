@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.mailchat.view.AttachmentView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/attachment_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="11dp"
+        android:background="@color/white"    
+        android:padding="4dp" >
+		
+        <ImageView
+            android:id="@+id/attachment_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true" />
+        
+        <RelativeLayout
+            android:id="@+id/rl_attachment_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/attachment_icon"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="60dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/attachment_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:ellipsize="middle"
+                android:gravity="left|center"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/attachment_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/attachment_name"
+                android:layout_marginTop="-6dp"
+                android:layout_marginBottom="-8dp"
+                android:visibility="gone" />
+			
+            <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/attachment_progress" >
+		        
+	            <TextView
+	                android:id="@+id/attachment_info"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_alignWithParentIfMissing="true"
+	                android:ellipsize="middle"
+	                android:singleLine="true"
+	                android:gravity="left|center"
+	                android:textColor="@color/gray"
+	                android:textSize="12sp" />
+	            
+	            <TextView
+	                android:id="@+id/attachment_hint"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="10dp"
+	                android:layout_toRightOf="@id/attachment_info"
+	                android:layout_alignWithParentIfMissing="true"
+	                android:ellipsize="middle"
+	                android:singleLine="true"
+	                android:gravity="left|center"
+	                android:textColor="@color/gray"
+	                android:textSize="12sp"
+	                android:text="@string/attachment_hint_downloaded" />
+	            
+			</RelativeLayout>
+			
+        </RelativeLayout>
+        
+        <ImageView
+            android:id="@+id/attachment_menu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/btn_file_menu" />
+        
+        <ImageView
+            android:id="@+id/attachment_cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/btn_file_cancel"
+            android:visibility="gone" />
+        
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/title_line" />
+
+</cn.mailchat.view.AttachmentView>

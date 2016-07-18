@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/feedback"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginRight="13.3dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_edittext_n"
+        android:gravity="left|bottom"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+        android:minHeight="@dimen/title_height"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/setting_main_current_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginRight="13.3dp"
+        android:layout_marginTop="10dp"
+        android:duplicateParentState="true"
+        android:text="@string/feedback_tips"
+        android:textColor="@color/selector_setting_item_text_right"
+        android:textSize="12sp" />
+
+</LinearLayout>

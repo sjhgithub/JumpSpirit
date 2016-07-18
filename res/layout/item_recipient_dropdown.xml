@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <cn.mailchat.view.RoundImageView
+        android:id="@+id/contact_img_head"
+        android:layout_width="36dip"
+        android:layout_height="36dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/icon_image_bg"
+        android:contentDescription="@null"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:round_view_radius="2dp" />
+
+    <RelativeLayout
+        android:id="@+id/linerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/contact_img_head"
+        android:duplicateParentState="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txt_view_personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:duplicateParentState="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/message_title_view_sub_black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_view_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_view_personal"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/font_color_gray"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

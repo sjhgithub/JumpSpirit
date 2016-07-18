@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="button_minWidth">100sp</dimen>
+    <!-- 标题大小 -->
+    <dimen name="title_textsize">17.3sp</dimen>
+    <dimen name="title_bottom_line">0.5dip</dimen>
+    <dimen name="popo_menu_dialog_width">180dp</dimen>
+    <dimen name="popo_main_chatting_menu_dialog_width">140dp</dimen>
+
+</resources>

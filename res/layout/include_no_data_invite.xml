@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_list_no_data_invite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="gone" >
+    
+	<TextView
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginRight="13.3dp"
+        android:layout_marginBottom="27dp"
+        android:text="@string/invite_chat_prompt"
+        android:textSize="16sp"/>
+	
+	<ListView
+        android:id="@+id/contact_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="0dip"
+        android:drawSelectorOnTop="true"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:listSelector="#00000000"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+	
+	<LinearLayout
+	    android:id="@+id/ly_invite_contact"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+	    android:layout_marginTop="25dp"
+	    android:layout_marginLeft="13.3dp"
+	    android:layout_marginRight="13.3dp"
+	    android:orientation="horizontal">
+	    
+	    <ImageView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/ic_chat_list_invite"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="6dp"
+	        android:text="@string/chat_list_invite_colleagues"
+	        android:textSize="16sp"
+	        android:textColor="@color/blue_search"/>
+	    
+	</LinearLayout>
+</LinearLayout>

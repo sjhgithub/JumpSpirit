@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    
+
+    <RelativeLayout
+        android:layout_width="75dp"
+        android:layout_height="wrap_content" >
+
+        <cn.mailchat.view.RoundImageView
+            android:id="@+id/contact_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/icon_image_bg"
+            android:contentDescription="@null"
+            app:round_view_radius="3dp" />
+
+        <TextView
+            android:id="@+id/contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contact_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6.0dp"
+            android:singleLine="true"
+             android:ellipsize="end"
+            android:textColor="#333333"
+            android:textSize="12sp" >
+        </TextView>
+
+        <CheckBox
+            android:id="@+id/muliple_select_user_item_cb"
+            android:layout_width="16dip"
+            android:layout_height="16dip"
+            android:layout_alignBottom="@+id/contact_image"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_checkbox"
+            android:button="@null"
+            android:clickable="false"
+            android:duplicateParentState="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+    </RelativeLayout>
+
+</FrameLayout>

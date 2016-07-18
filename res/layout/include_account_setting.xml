@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_setting_accound"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 姓名 -->
+
+    <RelativeLayout
+        android:id="@+id/setting_username_parent"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:background="@drawable/selector_bg_setting_item"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp" >
+
+        <cn.mailchat.view.RoundImageView
+            android:id="@+id/info_set_picimg"
+            android:layout_width="48.0dp"
+            android:layout_height="48.0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            app:round_view_radius="2dp" />
+
+        <ImageView
+            android:id="@+id/img"
+            style="@style/setting_item_icon"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@null"
+            android:paddingLeft="5dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/img"
+            android:layout_toRightOf="@id/info_set_picimg"
+            android:orientation="vertical"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/chat_up"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/setting_username_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="@string/account_info_setting"
+                android:textColor="@color/chat_down"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bottom_line"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/gray" />
+    <!-- 签名 -->
+
+    <RelativeLayout
+        android:id="@+id/setting_account_email_sign_parent"
+        style="@style/setting_item_bottom" >
+
+        <TextView
+            android:id="@+id/setting_account_email_sign_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:duplicateParentState="true"
+            android:text="@string/message_compose_signature_hint"
+            android:textColor="@color/chat_up"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/mail_compose_signature_arrow"
+            android:layout_alignParentRight="true"
+            style="@style/setting_item_icon"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/mail_compose_signature"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_below="@id/setting_account_email_sign_title"
+            android:layout_toLeftOf="@id/mail_compose_signature_arrow"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:duplicateParentState="true"
+            android:textColor="@color/chat_down"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bottom_line"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/gray" />
+    
+    <!-- 密送发件给自己 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_always_bcc_self"
+        style="@style/setting_item_top" >
+
+        <TextView
+            style="@style/setting_item_text_left"
+            android:text="@string/account_settings_always_bcc_self" />
+
+        <CheckBox
+            android:id="@+id/checkbox_always_bcc_self"
+            style="@style/setting_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bottom_line"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/gray" />
+    
+    <!-- 新邮件通知 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_new_mail_notify"
+        style="@style/setting_item_top" >
+
+        <TextView
+            style="@style/setting_item_text_left"
+            android:text="@string/account_settings_notify_label" />
+
+        <CheckBox
+            android:id="@+id/checkbox_new_mail_notify"
+            style="@style/setting_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bottom_line"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/gray" />
+
+    <!-- 新消息通知 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_new_msg_notify"
+        style="@style/setting_item_top" >
+
+        <TextView
+            style="@style/setting_item_text_left"
+            android:text="@string/account_settings_notify_msg_label" />
+
+        <CheckBox
+            android:id="@+id/checkbox_new_msg_notify"
+            style="@style/setting_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bottom_line"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/gray" />
+
+    <!-- 新OA通知 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_new_oa_notify"
+        style="@style/setting_item_top" >
+
+        <TextView
+            style="@style/setting_item_text_left"
+            android:text="@string/account_settings_notify_oa_label" />
+
+        <CheckBox
+            android:id="@+id/checkbox_new_oa_notify"
+            style="@style/setting_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bottom_line"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/gray" />
+
+    <!-- 提醒范围设置 -->
+
+    <RelativeLayout
+        android:id="@+id/setting_account_notifation_scope_parent"
+        style="@style/setting_item_bottom" >
+
+        <TextView
+            android:id="@+id/setting_account_notifation_scope_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:duplicateParentState="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+            android:text="@string/setting_account_notifation_scope_title"
+            android:textColor="@color/chat_up"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/setting_account_notifation_scope_second_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/setting_account_notifation_scope_title"
+            android:duplicateParentState="true"
+            android:textColor="@color/chat_down"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <ImageView
+            style="@style/setting_item_icon"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bottom_line"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/gray" />
+    <!-- 收发件服务器设置 -->
+
+    <RelativeLayout
+        android:id="@+id/setting_account_server_setting_parent"
+        style="@style/setting_item_bottom" >
+
+        <TextView
+            android:id="@+id/setting_account_server_setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:duplicateParentState="true"
+            android:text="@string/setting_account_in_out_going_setting_title"
+            android:textColor="@color/chat_up"
+            android:textSize="16sp" />
+
+        <ImageView
+            style="@style/setting_item_icon"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bottom_line"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/gray" />
+
+</LinearLayout>

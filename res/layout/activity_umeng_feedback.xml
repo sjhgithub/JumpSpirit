@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/no_net"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/item_net" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/no_net"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/loading_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:visibility="gone" >
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/feedback_reply_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ListView
+                    android:id="@+id/lv_view_chatting_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="5dip"
+                    android:fadingEdge="none"
+                    android:listSelector="#00000000"
+                    android:paddingLeft="@dimen/back_from_left"
+                    android:transcriptMode="normal" >
+                </ListView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_push_message"
+                android:layout_width="fill_parent"
+                android:layout_height="36.7dip"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_chatting_push"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/push_message_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/back_from_left"
+                    android:layout_marginRight="23dip"
+                    android:singleLine="true"
+                    android:textColor="#4c4c4c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/push_message_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/back_from_left"
+                    android:textColor="#ff4c4c"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bottom_line"
+            android:background="@color/title_line" />
+
+        <RelativeLayout
+            android:id="@+id/operation_footer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <include layout="@layout/include_chatting_footer_temp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 录音提示 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_view_mic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_voice_mic"
+        android:gravity="center_horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/img_view_canl_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/voice1" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="@string/up_cancel"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <!-- 取消录音 -->
+
+    <LinearLayout
+        android:id="@+id/layout_view_cancle_mic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_cancle_sound_icon"
+        android:gravity="center_horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/bg_cancle_sound_red"
+            android:gravity="center"
+            android:text="@string/release_cancel"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- 太短 -->
+
+    <LinearLayout
+        android:id="@+id/layout_view_tooshort"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_sound_short"
+        android:gravity="center_horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="@string/time_too_short"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingTop="27dip" >
+
+                <LinearLayout
+                    android:id="@+id/mail_35"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:drawablePadding="5dip"
+                        android:drawableTop="@drawable/icon_mail_35"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mail_35"
+                        android:textColor="@color/chat_down"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gray" />
+
+                <LinearLayout
+                    android:id="@+id/mail_eyou"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:drawablePadding="5dip"
+                        android:drawableTop="@drawable/icon_mail_eyou"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mail_eyou"
+                        android:textColor="@color/chat_down"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gray" />
+
+                <LinearLayout
+                    android:id="@+id/mail_126"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:drawablePadding="5dip"
+                        android:drawableTop="@drawable/icon_mail_126"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mail_126"
+                        android:textColor="@color/chat_down"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/mail_qq"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:drawablePadding="5dip"
+                        android:drawableTop="@drawable/icon_mail_qq"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mail_qq"
+                        android:textColor="@color/chat_down"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gray" />
+
+                <LinearLayout
+                    android:id="@+id/mail_aliyun"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:drawablePadding="5dip"
+                        android:drawableTop="@drawable/icon_mail_aliyun"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mail_aliyun"
+                        android:textColor="@color/chat_down"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gray" />
+
+                <LinearLayout
+                    android:id="@+id/mail_163"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:drawablePadding="5dip"
+                        android:drawableTop="@drawable/icon_mail_163"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mail_163"
+                        android:textColor="@color/chat_down"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/mail_139"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:drawablePadding="5dip"
+                        android:drawableTop="@drawable/icon_mail_139"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mail_139"
+                        android:textColor="@color/chat_down"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gray" />
+
+                <LinearLayout
+                    android:id="@+id/mail_189"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:drawablePadding="5dip"
+                        android:drawableTop="@drawable/icon_mail_189"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mail_189"
+                        android:textColor="@color/chat_down"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gray" />
+
+                <LinearLayout
+                    android:id="@+id/mail_sina"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:drawablePadding="5dip"
+                        android:drawableTop="@drawable/icon_mail_sina"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mail_sina"
+                        android:textColor="@color/chat_down"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/mail_outlook"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:drawablePadding="5dip"
+                        android:drawableTop="@drawable/icon_mail_outlook"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mail_outlook"
+                        android:textColor="@color/chat_down"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gray" />
+
+                <LinearLayout
+                    android:id="@+id/mail_gmail"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:drawablePadding="5dip"
+                        android:drawableTop="@drawable/icon_mail_gmail"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mail_gmail"
+                        android:textColor="@color/chat_down"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gray" />
+
+                <LinearLayout
+                    android:id="@+id/mail_add"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:drawablePadding="5dip"
+                        android:drawableTop="@drawable/icon_mail_add"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mail_add"
+                        android:textColor="@color/chat_down"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/gray" />
+
+            <TextView
+                android:id="@+id/tv_chat_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="13.3dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/contac_support_action"
+                android:textColor="@color/blue_search"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

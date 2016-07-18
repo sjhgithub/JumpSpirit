@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/main_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include layout="@layout/include_again_authenticate" />
+
+        <include layout="@layout/include_no_push_service_reminder" />
+
+        <include layout="@layout/item_net" />
+
+        <cn.mailchat.view.CustomViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <include layout="@layout/include_main_footer" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/drawer_folder_menu"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#ff333333"
+        android:orientation="vertical" />
+
+</android.support.v4.widget.DrawerLayout>

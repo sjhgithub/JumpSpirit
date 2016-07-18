@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:id="@+id/main_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="51dp"
+        android:background="@color/main_bottom_bar"
+        android:baselineAligned="false"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/tabMessageLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_tab_message"
+                style="@style/main_footbar_image"
+                android:contentDescription="@null"
+                android:src="@drawable/icon_tab_message_n" />
+
+            <TextView
+                android:id="@+id/tv_tab_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_tab_message"
+                android:textColor="@color/main_bottom_bar_tv_normal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabWorkSpaceLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/img_tab_workspace"
+                style="@style/main_footbar_image"
+                android:contentDescription="@null"
+                android:src="@drawable/icon_tab_workspace_n" />
+
+            <TextView
+                android:id="@+id/tv_tab_workspace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_tab_workspace"
+                android:textColor="@color/main_bottom_bar_tv_normal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabMailLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_tab_mail"
+                style="@style/main_footbar_image"
+                android:contentDescription="@null"
+                android:src="@drawable/icon_tab_mail_n" />
+
+            <TextView
+                android:id="@+id/tv_tab_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_tab_mail"
+                android:textColor="@color/main_bottom_bar_tv_normal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabContactLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_tab_contact"
+                style="@style/main_footbar_image"
+                android:contentDescription="@null"
+                android:src="@drawable/icon_tab_contact_n" />
+
+            <TextView
+                android:id="@+id/tv_tab_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_tab_contant"
+                android:textColor="@color/main_bottom_bar_tv_normal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabMeLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_ab_me"
+                style="@style/main_footbar_image"
+                android:contentDescription="@null"
+                android:src="@drawable/icon_tab_me_n" />
+
+            <TextView
+                android:id="@+id/tv_tab_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_tab_me"
+                android:textColor="@color/main_bottom_bar_tv_normal"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

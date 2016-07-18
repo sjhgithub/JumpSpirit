@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.mailchat.view.ChoseAddressView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cview_contacts_search"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_edittext_p"
+    android:gravity="center_vertical"
+    android:minHeight="45.0dip"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/address_view_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:layout_marginRight="6dip"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="#808080"
+        android:textSize="16.0sp" />
+
+    <ScrollView
+        android:id="@+id/address_view_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:overScrollMode="never" >
+
+        <cn.mailchat.view.AddressViewControl
+            android:id="@+id/address_view_control"
+            android:layout_width="match_parent"
+            android:layout_height="24dp" >
+
+            <TextView
+                android:id="@+id/address_view_addresses_tv"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="16.0sp"
+                android:visibility="gone" />
+
+            <AutoCompleteTextView
+                android:id="@+id/address_view_address_actv"
+                android:layout_width="wrap_content"
+                android:layout_height="24dip"
+                android:background="@color/transparent"
+                android:completionThreshold="1"
+                android:dropDownAnchor="@id/address_view_name_tv"
+                android:dropDownHeight="wrap_content"
+                android:dropDownHorizontalOffset="-10dip"
+                android:dropDownVerticalOffset="10dip"
+                android:dropDownWidth="fill_parent"
+                android:fadingEdge="vertical"
+                android:fadingEdgeLength="4.0dip"
+                android:fitsSystemWindows="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:hint="群成员 选择联系人 或输入任意邮箱"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textEmailAddress"
+                android:minHeight="24dip"
+                android:minWidth="10.0dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/message_op_bg"
+                android:textSize="16sp" />
+        </cn.mailchat.view.AddressViewControl>
+    </ScrollView>
+
+</cn.mailchat.view.ChoseAddressView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dip"
+    android:paddingBottom="5dip" 
+    >
+
+    <LinearLayout
+        android:id="@+id/mail_info_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="45dip"
+        android:layout_marginRight="45dip"
+        android:background="@drawable/bg_chatting_item_mail_info" >
+
+        <TextView
+            android:id="@+id/chatting_item_mail_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/shallow_blue"
+            android:gravity="center"
+            android:maxWidth="260dp"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

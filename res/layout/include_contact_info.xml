@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="37dp" >
+
+        <!-- 公司 -->
+
+        <LinearLayout
+            android:id="@+id/layout_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:gravity="left|center" >
+
+            <TextView
+                android:id="@+id/tv_company_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_set_company"
+                android:textColor="@color/text_grey"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingLeft="34dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <!-- 部门 -->
+
+        <LinearLayout
+            android:id="@+id/layout_department"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:gravity="left|center" >
+
+            <TextView
+                android:id="@+id/tv_department_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_set_department"
+                android:textColor="@color/text_grey"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingLeft="34dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- 职位 -->
+
+        <LinearLayout
+            android:id="@+id/layout_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:gravity="left|center" >
+
+            <TextView
+                android:id="@+id/tv_position_titel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_set_position"
+                android:textColor="@color/text_grey"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingLeft="34dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <!-- 电话 -->
+
+        <cn.mailchat.view.NoScrollListView
+            android:id="@+id/listView_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/transparent"
+            android:dividerHeight="0dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="gone" >
+        </cn.mailchat.view.NoScrollListView>
+        <!-- 地址 -->
+
+        <LinearLayout
+            android:id="@+id/layout_addr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:gravity="left|center" >
+
+            <TextView
+                android:id="@+id/tv_addr_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_address"
+                android:textColor="@color/text_grey"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_addr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingLeft="34dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <!-- 其他 -->
+
+        <LinearLayout
+            android:id="@+id/layout_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:gravity="left|center" >
+
+            <TextView
+                android:id="@+id/tv_other_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_other"
+                android:textColor="@color/text_grey"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingLeft="34dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

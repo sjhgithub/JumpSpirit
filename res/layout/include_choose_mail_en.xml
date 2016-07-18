@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:background="@color/transparent"
+	        android:clickable="false"
+	        android:orientation="vertical"
+	        android:paddingBottom="10.0dip" >
+	
+	        <ImageView
+	            android:id="@+id/mail_google"
+	            style="@style/choose_domain_item"
+	            android:contentDescription="@null"
+	            android:src="@drawable/icon_mail_google" />
+	
+	        <include layout="@layout/include_choose_en_mail_divider" />
+	
+	        <ImageView
+	            android:id="@+id/mail_outlook_en"
+	            style="@style/choose_domain_item"
+	            android:contentDescription="@null"
+	            android:src="@drawable/icon_mail_outlook_en" />
+	
+	        <include layout="@layout/include_choose_en_mail_divider" />
+	
+	        <ImageView
+	            android:id="@+id/mail_yahoo"
+	            style="@style/choose_domain_item"
+	            android:contentDescription="@null"
+	            android:src="@drawable/icon_mail_yahoo" />
+	
+	        <include layout="@layout/include_choose_en_mail_divider" />
+	
+	        <ImageView
+	            android:id="@+id/mail_aol"
+	            style="@style/choose_domain_item"
+	            android:contentDescription="@null"
+	            android:src="@drawable/icon_mail_aol" />
+	
+	        <include layout="@layout/include_choose_en_mail_divider" />
+	
+	        <ImageView
+	            android:id="@+id/mail_icloud"
+	            style="@style/choose_domain_item"
+	            android:contentDescription="@null"
+	            android:src="@drawable/icon_mail_icloud" />
+	
+	        <include layout="@layout/include_choose_en_mail_divider" />
+	
+	        <ImageView
+	            android:id="@+id/mail_others"
+	            style="@style/choose_domain_item"
+	            android:contentDescription="@null"
+	            android:src="@drawable/icon_other_mail" />
+	
+	        <TextView
+	            android:id="@+id/tv_chat_help"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="10dp"
+	            android:gravity="center"
+	            android:text="@string/contac_support_action"
+	            android:textColor="@color/blue_search"
+	            android:textSize="16sp" />
+	
+	    </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

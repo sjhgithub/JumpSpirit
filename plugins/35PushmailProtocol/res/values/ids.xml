@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="address_lable_to" type="id">false</item>
+    <item name="address_lable_cc" type="id">false</item>
+    <item name="address_lable_bcc" type="id">false</item>
+</resources>

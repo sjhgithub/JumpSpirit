@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="12dip"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/message_switch_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="@color/transparent"
+                    android:divider="@color/title_line"
+                    android:dividerHeight="0.5dip"
+                    android:fadingEdge="none"
+                    android:listSelector="@color/transparent" >
+                </ListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/setting_block_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_account_settings" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_gravity="bottom"
+                    android:background="@color/title_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/message_switch_set_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:divider="@color/title_line"
+                    android:dividerHeight="0.5dip" >
+                </ListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mine_add_account_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="3dip"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/title_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mine_add_account"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="3dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="3dip"
+                android:background="@drawable/selector_set_bg_add_account_layout"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/setting_item_text_left"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:height="48dip"
+                    android:text="@string/setting_add_account" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_add"
+                    android:contentDescription="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/setting_block_title"
+                    android:text="@string/setting_notify_tiltle" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_gravity="bottom"
+                    android:background="@color/title_line" />
+
+                <RelativeLayout
+                    android:id="@+id/top_notify"
+                    style="@style/setting_item_top" >
+
+                    <TextView
+                        style="@style/setting_item_text_left"
+                        android:text="@string/account_settings_notify_label" />
+
+                    <CheckBox
+                        android:id="@+id/is_top_notify"
+                        style="@style/setting_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/title_bottom_line"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/title_line" />
+                <!-- 铃声开关 -->
+
+                <RelativeLayout
+                    android:id="@+id/set_bell"
+                    style="@style/setting_item_middle" >
+
+                    <TextView
+                        style="@style/setting_item_text_left"
+                        android:text="@string/setting_voice_remind" />
+
+                    <CheckBox
+                        android:id="@+id/is_bell_open"
+                        style="@style/setting_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/title_bottom_line"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/title_line" />
+                <!-- 振动开关 -->
+
+                <RelativeLayout
+                    android:id="@+id/set_vibrate"
+                    style="@style/setting_item_middle" >
+
+                    <TextView
+                        style="@style/setting_item_text_left"
+                        android:text="@string/account_settings_vibrate_enable" />
+
+                    <CheckBox
+                        android:id="@+id/is_vibrate_open"
+                        style="@style/setting_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/title_bottom_line"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/title_line" />
+                <!-- 安静时段 -->
+
+                <RelativeLayout
+                    android:id="@+id/set_quiet_time"
+                    style="@style/setting_item_middle" >
+
+                    <TextView
+                        style="@style/setting_item_text_left"
+                        android:text="@string/quiet_time" />
+
+                    <CheckBox
+                        android:id="@+id/is_set_quiet_time"
+                        style="@style/setting_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_quiet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/title_bottom_line"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@color/title_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/set_quiet_start"
+                        style="@style/setting_item_middle" >
+
+                        <TextView
+                            android:id="@+id/txt_quiet_start"
+                            style="@style/setting_item_text_left"
+                            android:text="@string/quiet_time_starts" />
+
+                        <TextView
+                            android:id="@+id/quiet_start"
+                            style="@style/setting_item_text_right" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/title_bottom_line"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@color/title_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/set_quiet_end"
+                        style="@style/setting_item_bottom" >
+
+                        <TextView
+                            android:id="@+id/txt_quiet_end"
+                            style="@style/setting_item_text_left"
+                            android:text="@string/quiet_time_ends" />
+
+                        <TextView
+                            android:id="@+id/quiet_end"
+                            style="@style/setting_item_text_right" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/setting_block_title"
+                            android:text="@string/setting_about35Mail" />
+
+                        <TextView
+                            style="@style/setting_block_title_right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="@string/privacy_agreement" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_gravity="bottom"
+                        android:background="@color/title_line" />
+                </LinearLayout>
+                <!-- 意见反馈 -->
+
+                <RelativeLayout
+                    android:id="@+id/setting_feedback"
+                    style="@style/setting_item_middle" >
+
+                    <TextView
+                        style="@style/setting_item_text_left"
+                        android:text="@string/setting_feedback"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/title_bottom_line"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/title_line" />
+
+                <!-- 检查新版本 -->
+
+                <RelativeLayout
+                    android:id="@+id/setting_main_check_version_parent"
+                    style="@style/setting_item_bottom" >
+
+                    <TextView
+                        android:id="@+id/setting_main_check_version_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="5dp"
+                        android:duplicateParentState="true"
+                        android:text="@string/account_new_version"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/setting_main_current_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/setting_main_check_version_title"
+                        android:duplicateParentState="true"
+                        android:textColor="@color/selector_setting_item_text_right"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        style="@style/setting_item_icon"
+                        android:contentDescription="@null" />
+
+                    <ImageView
+                        android:id="@+id/setting_main_has_new_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="25dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/icon_setting_new_version"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/title_bottom_line"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/title_line" />
+
+                <!-- 手势密码 -->
+
+                <RelativeLayout
+                    android:id="@+id/gesture"
+                    style="@style/setting_item_top" >
+
+                    <TextView
+                        style="@style/setting_item_text_left"
+                        android:text="@string/text_gesture" />
+
+                    <CheckBox
+                        android:id="@+id/is_gesture"
+                        style="@style/setting_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/title_bottom_line"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/title_line" />
+
+                <!-- 修改手势密码 -->
+
+                <RelativeLayout
+                    android:id="@+id/modify_gesture_password"
+                    style="@style/setting_item_middle" >
+
+                    <TextView
+                        style="@style/setting_item_text_left"
+                        android:text="@string/text_modify_gesture" />
+                </RelativeLayout>
+
+                <!-- 清除缓存 -->
+
+                <RelativeLayout
+                    android:id="@+id/setting_main_clear_cache_parent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginLeft="13dip"
+                    android:layout_marginRight="13dip"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/selector_bg_setting_item_onlyone"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:duplicateParentState="true"
+                        android:text="@string/setting_clear_cache_parent"
+                        android:textColor="@color/selector_setting_item_text_left"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

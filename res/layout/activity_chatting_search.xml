@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/layoutView_search_chatting_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <ListView
+            android:id="@+id/lv_chatting_search_history"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/bg_attachment_child_list_divider"
+            android:dividerHeight="1dip" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/lv_chatting_search_result"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/bg_attachment_child_list_divider"
+            android:dividerHeight="1dip"
+            android:scrollbars="none"
+            android:visibility="invisible" >
+        </ListView>
+        <TextView 
+            android:id="@+id/no_result"
+		    android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+		    android:layout_gravity="center_horizontal"
+		    android:text="@string/search_no_result"
+		    android:layout_marginTop="30dp"
+		    android:visibility="visible"/>
+    </FrameLayout>
+
+</RelativeLayout>

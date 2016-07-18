@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_view_contacts_search"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/back_from_left2"
+    android:paddingRight="@dimen/back_from_left2" 
+    android:visibility="gone" >
+
+    <!-- 编辑的内容 -->
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include_chose_contact_address_view" />
+    <!-- 无联系人时显示 -->
+
+    <TextView
+        android:id="@+id/txt_view_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/title_height"
+        android:text="@string/fetch_contact_seach_no_result"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</LinearLayout>

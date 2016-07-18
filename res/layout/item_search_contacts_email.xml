@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/selector_bg_list_item"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layoutView_no_data_search_contacts"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/txtView_no_search_contact"
+            android:layout_width="fill_parent"
+            android:layout_height="22dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="13.3dip"
+            android:singleLine="true"
+            android:text="@string/txtView_no_search_contact"
+            android:textColor="#555555"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="#CECECE" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtView_search_email"
+        android:layout_width="fill_parent"
+        android:layout_height="50.6dip"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dip"
+        android:paddingLeft="13.3dip"
+        android:paddingRight="10dip"
+        android:textColor="#333333"
+        android:paddingTop="5dip"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/left_separator"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:background="#CECECE"
+      	 />
+
+</LinearLayout>

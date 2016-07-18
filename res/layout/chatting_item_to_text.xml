@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dip"
+    android:paddingRight="8.5dp"
+    android:paddingTop="5dip" >
+
+    <include layout="@layout/include_chatting_item_time" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/chatting_item_time"
+        android:duplicateParentState="true"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+		<LinearLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginRight="8.5dp"
+		    android:duplicateParentState="true"
+		    android:gravity="right"
+		    android:orientation="vertical" >
+
+	        <include layout="@layout/include_chatting_item_to_name_time" />
+
+	        <RelativeLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="3dip"
+	            android:duplicateParentState="true" >
+
+	            <LinearLayout
+	                android:id="@+id/chatting_item_content"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:background="@drawable/chatto_bg"
+	                android:duplicateParentState="true"
+	                android:orientation="horizontal" >
+
+	                <cn.mailchat.view.TextViewFixTouchConsume
+                        android:id="@id/txt_view_chatting_content"
+                        style="@style/ChattingUIText"
+                        android:duplicateParentState="true"
+                        android:padding="10dip" />
+
+	            </LinearLayout>
+
+	            <ImageView
+	                android:id="@+id/chatting_item_send_failed"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignBottom="@id/chatting_item_content"
+	                android:layout_alignTop="@id/chatting_item_content"
+	                android:layout_centerVertical="true"
+	                android:layout_marginRight="5dip"
+	                android:layout_toLeftOf="@id/chatting_item_content"
+	                android:src="@drawable/bg_chatting_item_send_failed" />
+	            <ProgressBar
+	                    android:id="@+id/pb_text_sending"
+	                    style="?android:attr/progressBarStyleSmall"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="5dip"
+	                    android:layout_alignBottom="@id/chatting_item_content"
+	                    android:layout_alignTop="@id/chatting_item_content"
+	                    android:layout_toLeftOf="@id/chatting_item_content"
+	                    android:layout_gravity="center"
+	                    android:visibility="gone" />
+	        </RelativeLayout>
+        </LinearLayout>
+
+        <include layout="@layout/include_chatting_item_head" />
+
+    </LinearLayout>
+
+</RelativeLayout>

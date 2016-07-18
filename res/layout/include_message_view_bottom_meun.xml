@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 收件箱底部 -->
+
+    <LinearLayout
+        android:id="@+id/layout_message_view_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5px"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/layout_message_view_bottom_inbox"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal" >
+
+            <!-- 全部答复 -->
+
+            <RelativeLayout
+                android:id="@+id/btn_message_view_bottom_reply_all"
+                style="@style/bg_bottom_btn" >
+
+                <ImageView
+                    android:id="@+id/btn_reply_all"
+                    style="@style/img_bottom_btn"
+                    android:contentDescription="@null"
+                    android:src="@drawable/message_view_bottom_reply_all_n" />
+
+                <TextView
+                    android:id="@+id/reply_all_tv"
+                    style="@style/text_bottom_btn"
+                    android:layout_below="@id/btn_reply_all"
+                    android:text="@string/reply_all_action" />
+            </RelativeLayout>
+            <!-- 答复 -->
+
+            <RelativeLayout
+                android:id="@+id/btn_message_view_bottom_reply"
+                style="@style/bg_bottom_btn" >
+
+                <ImageView
+                    android:id="@+id/btn_reply"
+                    style="@style/img_bottom_btn"
+                    android:contentDescription="@null"
+                    android:src="@drawable/message_view_bottom_reply_n" />
+
+                <TextView
+                    style="@style/text_bottom_btn"
+                    android:layout_below="@id/btn_reply"
+                    android:text="@string/reply_action" />
+            </RelativeLayout>
+            <!-- 即时沟通 -->
+
+            <RelativeLayout
+                android:id="@+id/btn_message_view_bottom_talk"
+                style="@style/bg_bottom_btn" >
+
+                <ImageView
+                    android:id="@+id/btn_talk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="false"
+                    android:contentDescription="@null"
+                    android:duplicateParentState="true"
+                    android:padding="1dip"
+                    android:src="@drawable/message_view_bottom_chat_n"
+                    android:textColor="@color/white_black" />
+
+                <TextView
+                    android:id="@+id/talk_tv"
+                    style="@style/text_bottom_btn"
+                    android:layout_below="@id/btn_talk"
+                    android:paddingBottom="5dp"
+                    android:text="@string/talk_action"
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <!-- 转发 -->
+
+            <RelativeLayout
+                android:id="@+id/btn_message_view_bottom_forward"
+                style="@style/bg_bottom_btn" >
+
+                <ImageView
+                    android:id="@+id/btn_forward"
+                    style="@style/img_bottom_btn"
+                    android:contentDescription="@null"
+                    android:src="@drawable/message_view_bottom_forward_n" />
+
+                <TextView
+                    android:id="@+id/forward_tv"
+                    style="@style/text_bottom_btn"
+                    android:layout_below="@id/btn_forward"
+                    android:text="@string/forward_action" />
+            </RelativeLayout>
+
+            <!-- 删除 -->
+
+            <RelativeLayout
+                android:id="@+id/btn_message_view_bottom_delete"
+                style="@style/bg_bottom_btn" >
+
+                <ImageView
+                    android:id="@+id/btn_delete"
+                    style="@style/img_bottom_btn"
+                    android:contentDescription="@null"
+                    android:padding="1dip"
+                    android:src="@drawable/message_view_bottom_delete" />
+
+                <TextView
+                    style="@style/text_bottom_btn"
+                    android:layout_below="@id/btn_delete"
+                    android:text="@string/delete_action" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_message_view_bottom_edit"
+                style="@style/bg_bottom_btn"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/btn_edit"
+                    style="@style/img_bottom_btn"
+                    android:contentDescription="@null"
+                    android:padding="1dip"
+                    android:src="@drawable/message_view_bottom_edit" />
+
+                <TextView
+                    style="@style/text_bottom_btn"
+                    android:layout_below="@id/btn_edit"
+                    android:text="@string/edit_action" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

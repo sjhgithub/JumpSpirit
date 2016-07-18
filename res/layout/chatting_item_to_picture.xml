@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="8.5dp"
+    android:paddingTop="5dip"
+    android:paddingBottom="5dip"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal" >
+
+    <include layout="@layout/include_chatting_item_time" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/chatting_item_time"
+        android:duplicateParentState="true"
+        android:gravity="right"
+        android:orientation="horizontal" >
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:duplicateParentState="true"
+	        android:gravity="right"
+	        android:layout_marginRight="8.5dp"
+	        android:orientation="vertical">
+
+	        <include layout="@layout/include_chatting_item_to_name_time" />
+
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="3dip"
+	            android:duplicateParentState="true"
+	            android:gravity="right|center_vertical"
+	            android:orientation="horizontal" >
+
+	            <ImageView
+	                android:id="@+id/chatting_item_send_failed"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:layout_gravity="center_vertical"
+	                android:layout_marginRight="5dip"
+	                android:src="@drawable/bg_chatting_item_send_failed" />
+
+	            <ProgressBar
+	                    android:id="@+id/picture_sending"
+	                    style="?android:attr/progressBarStyleSmall"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="5dip"
+	                    android:layout_gravity="center"
+	                    android:visibility="gone" />
+	            <LinearLayout
+	                android:id="@+id/chatting_item_image"
+	                style="@style/Chatting_layout_to"
+	                android:paddingTop="2.3dip"
+	                android:paddingBottom="2.3dip"
+	                android:paddingLeft="2.3dip"
+	                android:paddingRight="6.5dip"
+	                android:orientation="horizontal" >
+
+	                <include layout="@layout/include_chatting_radius_image" />
+
+	                <!--  Imageloader会使imageView浮在最上层，导致无圆角
+	                <ImageView
+	                    android:id="@id/img_view_chatting_picture"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:maxWidth="260dip"
+	                    android:src="@drawable/icon"
+	                    android:scaleType="fitXY" />
+					-->
+	            </LinearLayout>
+
+	        </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/include_chatting_item_head" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_chatting_show_dialog"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="5dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="5dip" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_chatting_search_item_member_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_chatting_search_item_date"
+            android:layout_marginRight="10dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_chatting_search_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            android:textColor="@color/bg_group_set_txt" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/chatting_search_voice_content_bg"
+        style="@style/Chatting_layout_from"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dip"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/chatting_history_voice_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:maxLength="20"
+            android:src="@drawable/bg_chatting_from_voice_playing003" />
+
+        <TextView
+            android:id="@+id/tv_chatting_voice_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="60"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

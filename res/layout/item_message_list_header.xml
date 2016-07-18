@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- android:background="@drawable/bg_item_message_list" -->
+    <!-- 日期控件 -->
+
+    <LinearLayout 
+        android:id="@+id/layout_message_list_date"
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/messagelist_week_show"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="13.3dp"
+            android:singleLine="true"
+            android:textColor="#555555"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/messagelist_date_show"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="190dp"
+            android:singleLine="true"
+            android:textColor="#555555"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

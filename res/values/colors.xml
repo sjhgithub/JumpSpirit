@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="message_list_date_seperator_background">#f5f5f5</color>
+    <color name="message_list_item_footer_background">#eeeeee</color>
+    <color name="openpgp_red">#CC0000</color>
+    <color name="openpgp_orange">#FF8800</color>
+    <color name="openpgp_green">#669900</color>
+    <color name="openpgp_blue">#336699</color>
+    <color name="title_line">#CCCCCC</color>
+    <color name="address_color">#00679a</color>
+    <color name="address_title_color">#808080</color>
+    <!-- actionBar -->
+    <color name="message_title_view_sub_black">#333333</color>
+    <color name="message_title_view_sub_gray">#808080</color>
+    <color name="line_color">#cccccc</color>
+    <color name="title_press_gray">#ededed</color>
+    <color name="bg_title_bar">#F5F5F5</color>
+    <color name="bg_actionbar_press">#e5e5e5</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+     <color name="action_bar_green">#59c750</color>
+    
+    <!-- 主列表中部所用色调 -->
+    <color name="green">#33CC00</color>
+    <color name="blue">#3333FF</color>
+    <color name="group_blue">#26a2e2</color>
+    <color name="message_list_check_bg">#e5e5e5</color>
+    <color name="mark_read">#808080</color>
+ <!-- 邮件列表已读状态发件人\主题颜色 -->
+    <color name="unread_preview">#4d4d4d</color>
+ <!-- 邮件列表未读状态发件人颜色 -->
+    <color name="unread_subject">#666666</color>
+ <!-- 邮件列表未读状态主题颜色 -->
+    <drawable name="gray">#e6e6e6</drawable>
+
+    <color name="list_item_background_normal">#ffffff</color>
+    <color name="list_item_background_pressed">#F1F1F1</color>
+    <!-- mainActivity -->
+    <color name="main_bottom_bar">#f5f5f5</color>
+    <color name="main_bottom_bar_tv_normal">#737373</color>
+    <color name="main_bottom_bar_tv_press">#0793da</color>
+    <color name="red">#FF0000</color>
+    <color name="setting_select">#999999</color>
+ <!-- 设置选中字体，或不能用时的字体 -->
+
+    <drawable name="white_bg">#FFFFFF</drawable>
+    <drawable name="gray_bg">#E6E6E6</drawable>
+
+     <color name="bg_title_right_txt">#0190d9</color>
+     <color name="add_contacts_disable">#666666</color>
+     <color name="group_icon_color_01">#aad85b</color>
+    <color name="group_icon_color_02">#f5be01</color>
+    <color name="group_icon_color_03">#ff8c37</color>
+    <color name="group_icon_color_04">#799ffe</color>
+    <color name="group_icon_color_05">#ff6464</color>
+    <color name="group_icon_color_06">#3bc999</color>
+    <drawable name="transparent">#00000000</drawable>
+    <drawable name="drawable_light_blue">#e5e5e5</drawable>
+    <color name="gray_text">#4d4d4d</color>
+    <color name="gray_bg">#f0f0f0</color>
+    <color name="gray">#888888</color>
+    <color name="text_unread_02">#4d4d4d</color>
+    <color name="text_read">#b3b3b3</color>
+    <color name="bg_group_set_txt">#666666</color>
+    <color name="folder_list_bg_p">#9CC2D5</color>
+    <color name="bg_messagelist_stick">#e7eff3</color>
+    <color name="text_grey">#808080</color>
+    <color name="reciever_txt_color">#666666</color>
+    <color name="chatting_btn_txt">#616158</color>
+    <color name="chatting_blue">#0190d9</color>
+    <color name="bg_chatting_name">#005581</color>
+	<color name="text_dark">#af000000</color>
+    <color name="text_light">#3f000000</color>
+    
+    <color name="message_op_bg">#0090d9</color>
+    <color name="transparent">#00000000</color>
+    <color name="title_right_light_green">#59c750</color>
+    <color name="thick">#d9d9d9</color>
+    <color name="btn_im_set_normal">#ff3f3f</color> <!-- 单聊设置删除按钮正常色 -->
+    <color name="btn_im_set_press">#e72323</color> <!-- 单聊设置删除按钮下压色 -->
+    
+   
+    <color name="tv_choice_normal"> #4d4d4d</color> <!-- 邮件列表搜索选择按钮正常色 -->
+    <color name="tv_choice_press">#0793da</color> <!-- 邮件列表搜索选择按钮下压色 -->
+	<color name="folder_left_shape_blue">#2ea8e6</color>
+	<color name="gray_search">#808080</color>
+	<color name="blue_search">#0793da</color>
+	 <color name="font_color_gray">#999999</color>
+	 <color name="light_blue">#0190D9</color>
+	 <color name="chat_up">#333333</color>
+	 <color name="chat_down">#aaaaaa</color>
+	 <color name="time_bbb">#bbbbbb</color>
+	 <color name="bluebg">#41aae0</color>
+	 <color name="gray_e6">#e6e6e6</color>
+	 <color name="btn_green_normal">#59c750</color> <!-- 单聊邀请按钮正常色 -->
+     <color name="btn_green_press">#32cd32</color> <!-- 单聊邀请按钮下压色 -->
+	 <color name="details">#0793ba</color>
+    <color name="list_background">#00000000</color>
+    <color name="list_background_pressed">#f5f5f5</color>
+    <color name="light_blue_font">#2cb4e6</color>
+    <color name="view_gray">#d9d9d9</color>
+    <color name="miui_tips">#f08c73</color>
+    <color name="tab_text_gray">#999999</color>
+    <color name="tab_strip_text_selected">#0793da</color>
+    <color name="tab_strip_text_unselected">@color/black</color>
+    <color name="tab_strip_background">#66fafafa</color>
+    <color name="split_line_grey_color_d9d9d9">#ffd9d9d9</color>
+	<drawable name="infoset_show_dialog_true">#FF0099CC</drawable>
+    <drawable name="infoset_show_dialog_false">#ffffffff</drawable>
+    <color name="progress_background">#c9c9c9</color>
+    <color name="chat_list_sending">#59c750</color>
+    <color name="chat_list_send_failed">#fe0000</color>
+    <color name="text_black6_3">#333333</color>
+    
+    <color name="att_square_color_01">#ff795c</color><!-- N -->
+    <color name="att_square_color_02">#ada49f</color><!-- O -->
+    <color name="att_square_color_03">#f86666</color><!-- P -->
+    <color name="att_square_color_04">#9cc724</color><!-- Q -->
+    <color name="att_square_color_05">#2ec065</color><!-- R -->
+    <color name="att_square_color_06">#f86666</color><!-- S -->
+    <color name="att_square_color_07">#ffb55e</color><!-- T -->
+    <color name="att_square_color_08">#f5be01</color><!-- U -->
+    <color name="att_square_color_09">#ff8c37</color><!-- V -->
+    <color name="att_square_color_10">#799ffe</color><!-- W -->
+    <color name="att_square_color_11">#2ec065</color><!-- X -->
+    <color name="att_square_color_12">#3bc999</color><!-- Y -->
+    <color name="att_square_color_13">#ef5e8a</color><!-- Z -->
+    <color name="att_square_color_14">#9cc724</color><!-- A -->
+    <color name="att_square_color_15">#aad85b</color><!-- B -->
+    <color name="att_square_color_16">#f5be01</color><!-- A -->
+    <color name="att_square_color_17">#379cdc</color><!-- D -->
+    <color name="att_square_color_18">#44cab9</color><!-- E -->
+    <color name="att_square_color_19">#ff6464</color><!-- F -->
+    <color name="att_square_color_20">#3bc999</color><!-- G -->
+    <color name="att_square_color_21">#52c0ee</color><!-- H -->
+    <color name="att_square_color_22">#5d8be9</color><!-- I -->
+    <color name="att_square_color_23">#97d9f5</color><!-- J -->
+    <color name="att_square_color_24">#52c0ee</color><!-- K -->
+    <color name="att_square_color_25">#a6a6a6</color><!-- L -->
+    <color name="att_square_color_26">#ef5e8a</color><!-- M -->
+    <color name="text_contact_blue">#006dc3</color>
+        <!-- 下拉刷新时，颜色值 -->
+    <color name="swiperefresh_color1">#3333FF</color>
+    <color name="swiperefresh_color2">#ffffbb33</color>
+    <color name="swiperefresh_color3">#ffff4444</color>
+    <color name="swiperefresh_color4">#ffaa66cc</color>
+
+    <color name="deep_blue">#52b2ea</color>
+    <color name="deep_red">#f27573</color>
+    <color name="light_black">#665959</color>
+    <color name="gray_black">#555555</color>
+    <drawable name="no_image">#e1e1e1</drawable>
+    <color name="shallow_blue">#22adfe</color>
+</resources>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.mailchat.view.ProgressView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/progress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:progressEmptyStateBackgroundColor="@color/white"
+    app:progressEmptyStateContentTextColor="@color/text_grey"
+    app:progressEmptyStateTitleTextColor="@color/text_grey"
+    app:progressErrorStateBackgroundColor="@color/white"
+    app:progressErrorStateButtonTextColor="@color/white"
+    app:progressErrorStateContentTextColor="@color/text_grey"
+    app:progressErrorStateTitleTextColor="@color/text_grey"
+    app:progressLoadingStateBackgroundColor="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/activity_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <include layout="@layout/include_search_contact_address_view" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_choose_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_edit"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_choose_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical" />
+
+            <CheckBox
+                android:id="@+id/muliple_select_user_item_cb"
+                android:layout_width="16dip"
+                android:layout_height="16dip"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="17.0dip"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/selector_checkbox"
+                android:button="@null"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/slide_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/layout_choose_all"
+            android:paddingTop="10dp" >
+
+            <cn.mailchat.view.IndexView
+                android:id="@+id/llv_view_muliple_select_user"
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:background="@drawable/slide_select_bg"
+                android:textColor="#aaaaaa"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_choose_all"
+            android:layout_toLeftOf="@id/slide_layout"
+            android:background="@android:color/white"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:dividerHeight="0dip"
+            android:drawSelectorOnTop="true"
+            android:fadingEdge="none"
+            android:listSelector="#00000000"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <FrameLayout
+            android:id="@+id/slide_frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@+id/slide_select_result"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/index_float_text_background"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="58sp"
+                android:typeface="monospace"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/no_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/search_no_result"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</cn.mailchat.view.ProgressView>

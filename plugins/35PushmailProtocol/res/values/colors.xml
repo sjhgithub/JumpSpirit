@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+		Copyright (C) 2008 The Android Open Source Project Licensed under the
+		Apache License, Version 2.0 (the "License"); you may not use this file
+		except in compliance with the License. You may obtain a copy of the
+		License at http://www.apache.org/licenses/LICENSE-2.0 Unless required
+		by applicable law or agreed to in writing, software distributed under
+		the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License.
+-->
+
+<resources>
+
+    <color name="folder_message_list_child_background">#3B3B3B</color>
+    <color name="white">#ffffffff</color>
+    <color name="add_contacts_disable">#666666</color>
+    <color name="red">#ffff0000</color>
+    <color name="transparent">#00000000</color>
+    <color name="other">#ffff0000</color>
+    <color name="message_view_header_line">#d1d1d1</color>
+    <color name="gray">#888888</color>
+    <color name="infocolor">#330000</color>
+    <color name="backgroundcolor">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blue">#3333FF</color>
+    <color name="green">#33CC00</color>
+    <color name="noconnection_bg">#d0d0d0</color>
+    <color name="msgcompose_bg">#ededed</color>
+    <color name="accountdialog_titlebg">#41aae0</color>
+    <color name="lightgrey_bodybg">#f0f0f0</color>
+    <color name="bluebg">#41aae0</color>
+
+    <drawable name="normal_dark">#ff272727</drawable>
+    <drawable name="press_orange">#ffff7600</drawable>
+    <drawable name="darkgray">#808080FF</drawable>
+    <drawable name="white">#6da5ff</drawable>
+    <drawable name="blue_1">#e7e7e7</drawable>
+    <drawable name="black_1">#8A8A8A</drawable>
+    <drawable name="blue_2">#41aae0</drawable>
+
+    <color name="address_color">#0f79b6</color>
+    <color name="address_title_color">#555555</color>
+    <color name="indicate">#e9e9e9</color>
+
+    <drawable name="gray">#e6e6e6</drawable>
+
+    <color name="login_edit_focused">#FFA500</color>
+    <color name="login_edit_unfocused">#00BFFF</color>
+    <color name="light_gray">#D3D3D3</color> <!-- 邮件快速列表的分隔线颜色 -->
+
+    <color name="light_blue_bg">#CDECFC</color> <!-- 淡蓝色背景 -->
+    <color name="message_preview_color">#666666</color>
+    <color name="search_shen_lan">#3A6098</color>
+    <color name="search_gray">#BEBEBE</color>
+    <color name="experience_persiontextgrey">#555555</color> <!-- 注册个人体验账户文字颜色 -->
+    <color name="experience_textblue">#0272A0</color> <!-- 注册云平台文字颜色 -->
+    <color name="experience_infotextblue">#309AC1</color> <!-- 注册云平台说明文字颜色 -->
+    <color name="experience_domainsucces">#318300</color> <!-- 注册云平台成功字体颜色 -->
+    <color name="setting_select">#999999</color> <!-- 设置选中字体，或不能用时的字体 -->
+
+    <color name="grey">#696969</color>
+    <color name="bluenew">#005885</color>
+
+    <drawable name="transparent">#00000000</drawable>
+    <drawable name="drawable_light_blue">#ddf2fd</drawable>
+
+</resources>

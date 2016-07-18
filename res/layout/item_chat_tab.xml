@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_chat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:duplicateParentState="true"
+        android:paddingBottom="8dp"
+        android:paddingLeft="15.0dp"
+        android:paddingRight="15.0dp"
+        android:paddingTop="8dp" >
+
+        <cn.mailchat.view.RoundImageView
+            android:id="@+id/logo_img"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/icon_image_bg"
+            android:contentDescription="@null"
+            app:round_view_radius="3dp" />
+
+        <RelativeLayout
+            android:id="@+id/linerLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/logo_img"
+            android:duplicateParentState="true"
+            android:orientation="vertical"
+            android:paddingLeft="8dp" >
+
+            <TextView
+                android:id="@+id/txt_chat_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/txt_chat_time"
+                android:duplicateParentState="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/message_title_view_sub_black"
+                android:textSize="16sp" />
+            <!-- 收信时间 -->
+
+            <TextView
+                android:id="@+id/txt_chat_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/txt_chat_name"
+                android:layout_alignBottom="@id/txt_chat_name"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:textColor="@color/font_color_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txt_chat_preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_chat_name"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/font_color_gray"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_chat_unread"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignBaseline="@id/logo_img"
+            android:layout_marginLeft="39.50dp"
+            android:background="@drawable/bg_unread_messagelist"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:minWidth="20dp"
+            android:padding="2dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" 
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="@dimen/back_from_left2"
+        android:layout_marginRight="@dimen/back_from_left2"
+        android:background="@drawable/gray" />
+
+</LinearLayout>

@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.mailchat"
+    android:versionCode="1163"
+    android:versionName="1.1.63" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:xlargeScreens="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+
+    <!-- Needed to mark a contact as contacted -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="org.thialfihar.android.apg.permission.READ_KEY_DETAILS" />
+ 	<uses-permission android:name="android.permission.GET_TASKS"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <permission
+        android:name="cn.mailchat.permission.READ_ATTACHMENT"
+        android:description="@string/read_attachment_desc"
+        android:label="@string/read_attachment_label"
+        android:permissionGroup="android.permission-group.MESSAGES"
+        android:protectionLevel="dangerous" />
+
+    <uses-permission android:name="cn.mailchat.permission.READ_ATTACHMENT" />
+
+    <permission
+        android:name="cn.mailchat.permission.REMOTE_CONTROL"
+        android:description="@string/remote_control_desc"
+        android:label="@string/remote_control_label"
+        android:permissionGroup="android.permission-group.MESSAGES"
+        android:protectionLevel="dangerous" />
+
+    <uses-permission android:name="cn.mailchat.permission.REMOTE_CONTROL" />
+
+    <permission
+        android:name="cn.mailchat.permission.READ_MESSAGES"
+        android:description="@string/read_messages_desc"
+        android:label="@string/read_messages_label"
+        android:permissionGroup="android.permission-group.MESSAGES"
+        android:protectionLevel="dangerous" />
+
+    <uses-permission android:name="cn.mailchat.permission.READ_MESSAGES" />
+
+    <permission
+        android:name="cn.mailchat.permission.DELETE_MESSAGES"
+        android:description="@string/delete_messages_desc"
+        android:label="@string/delete_messages_label"
+        android:permissionGroup="android.permission-group.MESSAGES"
+        android:protectionLevel="dangerous" />
+
+    <uses-permission android:name="cn.mailchat.permission.DELETE_MESSAGES" />
+
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    
+    <!-- AS通过GPS芯片接收卫星的定位信息，定位精度达10米以内 AS客户端地理位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" >
+    </uses-permission>
+
+	<!-- 魔窗相关权限 -->
+    <!-- 缓存资源优先存入SDcard -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 用于人人SSO登陆 -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <!-- 用于人人SSO登陆 -->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <!-- 用于人人SSO登陆 -->
+    <!-- GPS定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <application
+        android:name="MailChat"
+        android:persistent="true"
+        android:allowTaskReparenting="false"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.MailChat" >
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".activity.Search" />
+        <!-- 欢迎页 -->
+        <activity
+            android:name=".activity.setup.WelcomeActivity"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+       
+        <activity
+            android:name=".activity.Accounts"
+            android:configChanges="locale"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:mimeType="application/x-mailchatsettings" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <!-- 选择常用邮件登陆 -->
+        <activity android:name=".activity.setup.SelectEmailActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"  />
+        <activity
+            android:name=".activity.setup.Prefs"
+            android:configChanges="locale"
+            android:excludeFromRecents="true"
+            android:label="@string/prefs_title"
+            android:taskAffinity="cn.mailchat.activity.setup.Prefs" >
+        </activity>
+        <activity
+            android:name=".activity.setup.WelcomeMessage"
+            android:configChanges="locale"
+            android:label="@string/welcome_message_title" >
+        </activity>
+        <activity
+            android:name=".activity.setup.FontSizeSettings"
+            android:configChanges="locale"
+            android:label="@string/font_size_settings_title" >
+        </activity>
+        <activity
+            android:name=".activity.setup.AccountSetupBasics"
+            android:configChanges="locale"
+            android:label="@string/account_setup_basics_title" >
+        </activity>
+        <activity
+            android:name=".activity.setup.AccountSetupAccountType"
+            android:configChanges="locale"
+            android:label="@string/account_setup_account_type_title" >
+        </activity>
+        <activity
+            android:name=".activity.setup.AccountSetupIncoming"
+            android:configChanges="locale"
+            android:label="@string/account_setup_incoming_title" >
+        </activity>
+        <activity
+            android:name=".activity.setup.AccountSetupComposition"
+            android:configChanges="locale"
+            android:label="@string/account_settings_composition_title" >
+        </activity>
+        <activity
+            android:name=".activity.setup.AccountSetupOutgoing"
+            android:configChanges="locale"
+            android:label="@string/account_setup_outgoing_title" >
+        </activity>
+        <activity
+            android:name=".activity.setup.AccountSetupOptions"
+            android:configChanges="locale"
+            android:label="@string/account_setup_options_title" >
+        </activity>
+        <activity
+            android:name=".activity.setup.AccountSetupNames"
+            android:configChanges="locale"
+            android:label="@string/account_setup_names_title" >
+        </activity>
+        <activity
+            android:name=".activity.ChooseFolder"
+            android:configChanges="locale"
+            android:label="@string/choose_folder_title"
+            android:noHistory="true"
+            android:theme="@style/Theme.MailChatDialog" >
+        </activity>
+        <activity
+            android:name=".activity.ChooseIdentity"
+            android:configChanges="locale"
+            android:label="@string/choose_identity_title"
+            android:theme="@style/Theme.MailChatDialog" >
+        </activity>
+        <activity
+            android:name=".activity.ManageIdentities"
+            android:configChanges="locale"
+            android:label="@string/manage_identities_title" >
+        </activity>
+        <activity
+            android:name=".activity.EditIdentity"
+            android:configChanges="locale"
+            android:label="@string/edit_identity_title" >
+        </activity>
+        <activity
+            android:name=".activity.NotificationDeleteConfirmation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!--
+             XXX Note: this activity is hacked to ignore config changes,
+             since it doesn't currently handle them correctly in code.
+        -->
+        <activity
+            android:name=".activity.setup.AccountSetupCheckSettings"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:label="@string/account_setup_check_settings_title" >
+        </activity>
+        <activity
+            android:name=".activity.setup.AccountSettings"
+            android:configChanges="locale"
+            android:label="@string/account_settings_title_fmt" >
+        </activity>
+        <activity
+            android:name=".activity.setup.FolderSettings"
+            android:configChanges="locale"
+            android:label="@string/folder_settings_title"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <!-- 网页浏览 -->
+        <activity
+            android:name=".activity.WebViewWithErrorViewActivity"
+			android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="message_private_url"
+                    android:scheme="cn.mailchat.activity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SettingFeedbackActivity"
+            android:theme="@android:style/Theme.Light" />
+        <activity
+            android:name=".activity.Main4TabActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:launchMode="singleTop" >
+            <intent-filter>
+
+                <!-- This action is only to allow an entry point for launcher shortcuts -->
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="messages"
+                    android:scheme="email" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MailDetialActivity"
+            android:launchMode="singleTop" 
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+               android:configChanges="locale" >
+            <intent-filter>
+
+                <!-- This action is only to allow an entry point for launcher shortcuts -->
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="messages"
+                    android:scheme="email" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- Search Activity - searchable -->
+        <activity
+            android:name=".activity.Search"
+            android:configChanges="locale"
+            android:label="@string/search_action"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <!-- <activity
+            android:name=".activity.LauncherShortcuts"
+            android:configChanges="locale"
+            android:label="@string/shortcuts_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> -->
+        <activity android:name=".activity.AccessibleEmailContentActivity" >
+        </activity>
+        <activity
+            android:name=".activity.EmailAddressList"
+            android:configChanges="locale" >
+        </activity>
+		<activity
+            android:name=".activity.DChatInvitationActivity"
+            android:configChanges="locale" >
+        </activity>
+        <activity
+            android:name=".activity.ImageFullActivity"
+            android:configChanges="locale" >
+        </activity>
+         <activity
+            android:name=".activity.MailNotifyPendingActivity"
+            android:configChanges="locale" >
+        </activity>
+        
+        <activity
+            android:name=".activity.setup.GuideActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale" >
+        </activity>
+
+        <receiver
+            android:name=".service.BootReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.BACKGROUND_DATA_SETTING_CHANGED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.sync.SYNC_CONN_STATUS_CHANGED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="cn.mailchat.service.BroadcastReceiver.scheduleIntent" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.RemoteControlReceiver"
+            android:enabled="true"
+            android:permission="cn.mailchat.permission.REMOTE_CONTROL" >
+            <intent-filter>
+                <action android:name="cn.mailchat.MailChatRemoteControl.set" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="cn.mailchat.MailChatRemoteControl.requestAccounts" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.CoreReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="cn.mailchat.service.CoreReceiver.wakeLockRelease" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.StorageReceiver"
+            android:enabled="true" >
+            <intent-filter>
+
+                <!--
+android.intent.action.MEDIA_MOUNTED
+
+     * Broadcast Action:  External media is present and mounted at its mount point.
+     * The path to the mount point for the removed media is contained in the Intent.mData field.
+     * The Intent contains an extra with name "read-only" and Boolean value to indicate if the
+     * media was mounted read only.
+
+                -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <!--
+MEDIA_EJECT and MEDIA_UNMOUNTED are not defined here: they have to be dynamically registered
+otherwise it would make MailChat start at the wrong time
+
+                -->
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.MailService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name=".service.NotificationActionService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name=".service.PushService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name=".service.PollService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name=".service.RemoteControlService"
+            android:enabled="true"
+            android:permission="cn.mailchat.permission.REMOTE_CONTROL" >
+        </service>
+        <service
+            android:name=".service.SleepService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name=".service.NotificationService"
+            android:exported="false" >
+        </service>
+
+        <provider
+            android:name=".provider.AttachmentProvider"
+            android:authorities="cn.mailchat.attachmentprovider"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:multiprocess="true"
+            android:readPermission="cn.mailchat.permission.READ_ATTACHMENT" />
+        <provider
+            android:name=".provider.MessageProvider"
+            android:authorities="cn.mailchat.messageprovider"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:multiprocess="true"
+            android:readPermission="cn.mailchat.permission.READ_MESSAGES"
+            android:writePermission="cn.mailchat.permission.DELETE_MESSAGES" />
+        <provider
+            android:name=".provider.EmailProvider"
+            android:authorities="cn.mailchat.provider.email"
+            android:exported="false" />
+		<provider
+		    android:name=".provider.ChattingProvider"
+		    android:authorities="cn.mailchat.provider.chatting"
+		    android:exported="false" />
+
+        <receiver
+            android:name=".provider.UnreadWidgetProvider"
+            android:icon="@drawable/icon"
+            android:label="@string/unread_widget_label" >
+           <!--  <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/unread_widget_info" /> -->
+        </receiver>
+
+        <activity android:name=".activity.UnreadWidgetConfiguration" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.UpgradeDatabases"
+            android:label="@string/upgrade_databases_title" >
+        </activity>
+
+        <service
+            android:name=".service.DatabaseUpgradeService"
+            android:exported="false" >
+        </service>
+        <!-- 联系人详情 -->
+        <activity
+            android:name=".activity.ContactInfoActivity"
+            android:launchMode="singleTask"
+            android:configChanges="locale">
+        </activity>
+        <!-- 发起聊天 -->
+        <activity
+            android:name=".activity.CreateChattingActivity"
+            android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection">
+        </activity>
+        <activity
+            android:name=".activity.ChooseContactsActivity"
+            android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection" >
+        </activity>
+        <activity
+            android:name=".activity.ChattingActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+           android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection">
+        </activity>
+        <activity
+            android:name=".activity.ChattingSingleActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection">
+        </activity>
+        <!-- 单聊设置 -->
+        <activity
+            android:name=".activity.ChattingSingleSettingActivity"
+            android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection" >
+        </activity>
+        <!-- 群聊设置 -->
+        <activity
+            android:name=".activity.ChattingGroupSettingActivity"
+            android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection" >
+        </activity>
+        <!-- 全局搜索-->
+        <activity
+            android:name=".activity.GlobalSearchActivity"
+            android:configChanges="orientation|keyboardHidden|locale" 
+            android:windowSoftInputMode="stateVisible|adjustPan" >
+        </activity>
+        <!-- 邮件搜索-->
+        <activity
+            android:name=".activity.MailSearchActivity"
+            android:configChanges="orientation|keyboardHidden|locale" 
+            android:windowSoftInputMode="stateVisible|adjustPan" >
+        </activity>
+        <!-- 聯繫人搜索-->
+        <activity
+            android:name=".activity.ContactSearchActivity"
+            android:configChanges="orientation|keyboardHidden|locale" 
+            android:windowSoftInputMode="stateVisible|adjustPan" >
+        </activity>
+        <!-- 聯繫人邀请-->
+        <activity
+            android:name=".activity.InviteContactActivity"
+            android:configChanges="orientation|keyboardHidden|locale" 
+            android:windowSoftInputMode="stateVisible|adjustPan" >
+        </activity>
+        <!-- 聊天搜索-->
+        <activity
+            android:name=".activity.ChatSearchActivity"
+            android:configChanges="orientation|keyboardHidden|locale" 
+            android:windowSoftInputMode="stateVisible|adjustPan" >
+        </activity>
+        <!-- 群聊内容搜索 -->
+        <activity
+            android:name=".activity.SearchChattingActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/MyDialogStyle" 
+              android:configChanges="orientation|keyboardHidden|locale" 
+                  android:windowSoftInputMode="stateVisible|adjustPan" />
+           <!-- 修改群名称及群描述 -->
+        <activity
+            android:name=".activity.GroupChattingInfoChangeActivity"/>
+        <activity
+            android:name=".activity.SetPasswordActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.AddOrEditContactActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection"/>
+   		<!-- Mqtt Service -->
+        <service android:name="org.eclipse.paho.android.service.MqttService" 
+             android:enabled="true" 
+             android:exported="false"
+             android:priority="2147483647">
+        </service>   
+        <service android:name="cn.mailchat.service.PendingService">
+        </service>
+        <activity
+            android:name=".activity.GroupMembersActivity"
+            android:configChanges="locale" >
+        </activity>
+         <!-- 友盟统计模块 Start-->
+		<!-- Update Activitys Start -->
+		<activity
+			android:name="com.umeng.update.UpdateDialogActivity"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+		</activity>
+			<!-- 设置昵称头像-->
+		<activity
+            android:name=".activity.setup.AccountSetupNameActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+           android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection"/>
+		<activity
+            android:name=".activity.AccountSettingActivity"
+            android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection" />
+        <activity
+            android:name=".activity.BigImageShowerActivity"
+            android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.ForwardActivity"
+            android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection"
+            android:windowSoftInputMode="adjustResize" />
+		<activity
+            android:name=".activity.RecommendUseMailChatActivity"
+            android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection"
+            android:windowSoftInputMode="adjustResize" />
+		<activity
+		    android:name=".activity.NoPushGuideActivity"
+		    android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection"
+		    android:windowSoftInputMode="adjustResize" />
+		<activity
+		    android:name=".activity.ChatFromMailInfoActivity"
+		    android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection"
+		    android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.AttachmentPreviewActivity"
+            android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.OALoginActivity"
+            android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection"
+            android:windowSoftInputMode="adjustResize" />
+		<service
+			android:name="com.umeng.update.net.DownloadingService" >
+		</service>
+		<!-- Update Activitys End -->
+		<meta-data android:name="UMENG_APPKEY" android:value="546ebaacfd98c534d2002c2d"/>
+		<meta-data android:name="UMENG_CHANNEL" android:value="mailChatOut" />
+        <!-- 友盟统计模块 End-->
+        <activity
+            android:name=".activity.MailComposeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|locale"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+
+                <data android:scheme="mailto" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <data android:mimeType="*/*" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <data android:mimeType="*/*" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="mailto" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+  		<!-- 选择文件 -->
+        <activity
+            android:name=".activity.FilePickerActivity"/>
+         <!-- 友盟反馈--> 
+         <activity android:name="com.umeng.fb.ConversationActivity"/>
+         <activity android:name="cn.mailchat.activity.UmengFeekbackActivity"
+         android:configChanges="orientation|screenSize|fontScale|locale|layoutDirection"/>
+         <activity android:name="cn.mailchat.activity.SetImapInfoActivity"/>
+         <!-- 分享  start -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 分享  end -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<!-- 升级提示 -->
+        <activity
+            android:name="cn.mailchat.activity.UpgradeTipActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        
+        <!-- 渠道 -->
+        <meta-data
+            android:name="MW_CHANNEL"
+            android:value="Google Play" />
+        <!-- 百度地图定位服务  start -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="nnCGBeExssENVwLv58fTk335" />
+        <!-- 百度地图定位服务  end -->
+    </application>
+</manifest>

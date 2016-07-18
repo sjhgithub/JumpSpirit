@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.mailchat.view.AttachmentSquareView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/att_square_container"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/att_square_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_horizontal"
+        android:layout_margin="3dp"
+        android:lines="1"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/att_square_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_horizontal"
+        android:layout_marginRight="3dp"
+        android:lines="1"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+    
+    <TextView
+        android:id="@+id/att_square_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_horizontal"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+
+</cn.mailchat.view.AttachmentSquareView>

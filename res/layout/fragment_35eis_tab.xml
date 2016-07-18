@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.mailchat.view.ProgressView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/progress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:progressEmptyStateBackgroundColor="@color/white"
+    app:progressEmptyStateContentTextColor="@color/white"
+    app:progressEmptyStateTitleTextColor="@color/white"
+    app:progressErrorStateBackgroundColor="@color/white"
+    app:progressErrorStateButtonTextColor="@color/white"
+    app:progressErrorStateContentTextColor="@color/white"
+    app:progressErrorStateTitleTextColor="@color/white"
+    app:progressLoadingStateBackgroundColor="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ListView
+                android:id="@+id/lv_with_fresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:choiceMode="singleChoice"
+                android:divider="@null"
+                android:dividerHeight="0dip"
+                android:drawSelectorOnTop="true"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:listSelector="#00000000"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <ListView
+            android:id="@+id/lv_no_fresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:choiceMode="singleChoice"
+            android:divider="@null"
+            android:dividerHeight="0dip"
+            android:drawSelectorOnTop="true"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:listSelector="#00000000"
+            android:overScrollMode="never"
+            android:scrollbars="none" 
+            android:background="@color/white" />
+    </LinearLayout>
+
+</cn.mailchat.view.ProgressView>

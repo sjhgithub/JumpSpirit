@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutView_no_data_search_contacts"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <TextView
+        android:id="@+id/txtView_no_search_contact"
+        android:layout_width="fill_parent"
+        android:layout_height="22dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="13.3dip"
+        android:singleLine="true"
+        android:text="@string/txtView_no_search_contact"
+        android:textColor="#555555"
+        android:textSize="13sp" />
+
+</LinearLayout>

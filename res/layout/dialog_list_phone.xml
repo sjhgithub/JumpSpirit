@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/check_password_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+        <!-- 电话 -->
+        <cn.mailchat.view.NoScrollListView
+            android:id="@+id/listView_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/transparent"
+            android:dividerHeight="0dp"
+            android:overScrollMode="never"
+            android:scrollbars="none" >
+        </cn.mailchat.view.NoScrollListView>
+
+</LinearLayout>

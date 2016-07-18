@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_net"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.7dip"
+        android:background="#fffbdc" >
+
+        <ImageView
+            android:id="@+id/icon_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/back_from_left"
+            android:src="@drawable/icon_net_info" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@id/icon_net"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_net_title"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_net_subtitle"
+                android:textColor="@color/setting_select"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/net_set"
+            android:layout_width="69.3dip"
+            android:layout_height="26.7dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/back_from_left"
+            android:background="@drawable/rightcorner_bg_n"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:padding="0dip"
+            android:text="@string/item_net_button"
+            android:textColor="@color/white"
+            android:textSize="13.3sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"  
+     xmlns:mailchat="http://schemas.android.com/apk/res-auto">  
+   <item
+        android:id="@+id/action_DChat_setting"
+        android:icon="@drawable/icon_action_bar_dchat_setting"
+        android:showAsAction="always"
+        android:title="@string/dchatting_setting_action"
+        mailchat:showAsAction="always"/>
+      <item
+        android:id="@+id/action_QChat_setting"
+        android:icon="@drawable/icon_action_bar_qchat_setting"
+        android:showAsAction="always"
+        android:title="@string/qchatting_setting_action"
+        mailchat:showAsAction="always"/>
+</menu>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.c35.mtd.pushmail"
+    android:installLocation="internalOnly"
+    android:versionCode="4113"
+    android:versionName="4.1.13" >
+
+    <!-- 快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <!-- 添加桌面快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <!-- 允许程序在手机屏幕关闭后后台进程仍然运行(Push弹窗点亮屏幕时用)powerManager.newWakeLock -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 允许程序获取当前或最近运行的应用  用于确定是否在主屏幕是当前处于活动状态。 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 关闭应用程序的权限 在android2.2版本之后则不能再使用restartPackage()方法，而应该使用killBackgroundProcesses()方法 -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 允许读写系统设置项 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 挂载、反挂载外部文件系统 在sdcard中创建/删除文件夹的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 允许应用访问联系人通讯录信息 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- as读特定短信内容 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <!-- AS通过GPS芯片接收卫星的定位信息，定位精度达10米以内 AS客户端地理位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" >
+    </uses-permission>						   
+    <uses-permission android:name="android.permission.SHUTDOWN" /> 
+    <!--
+    AS 
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+	<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />								
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    -->
+
+    <permission
+        android:name="com.c35.mtd.pushmail.permission.GET_MAIL_MESSAGE"
+        android:description="@string/get_mailmessage_desc"
+        android:label="@string/get_mailmessage_label"
+        android:permissionGroup="android.permission-group.MESSAGES"
+        android:protectionLevel="dangerous" />
+
+    <uses-permission android:name="com.c35.mtd.pushmail.permission.GET_MAIL_MESSAGE" />
+
+    <application
+        android:name=".EmailApplication"
+        android:configChanges="locale"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+
+        <receiver
+            android:name=".receiver.BootReceiver"
+            android:enabled="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="flow_start_amon" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="flow_start_onpm" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name=".provider.AttachmentProvider"
+            android:authorities="com.c35.mtd.pushmail.attachmentprovider"
+            android:grantUriPermissions="true"
+            android:multiprocess="true"
+            android:readPermission="com.c35.mtd.pushmail.permission.READ_ATTACHMENT" />
+        <provider
+            android:name=".provider.MailMessageProvider"
+            android:authorities="com.c35.mtd.pushmail.mailmessageprovider"
+            android:grantUriPermissions="true"
+            android:multiprocess="true"
+            android:readPermission="com.c35.mtd.pushmail.permission.GET_MAIL_MESSAGE" />
+        <provider
+            android:name=".provider.MailAccountProvider"
+            android:authorities="com.c35.ptc.mail.mailcontentprovider" />
+
+        <service android:name=".service.PushMailService" />
+
+        <service
+            android:name="com.c35.ptc.as.activity.RegisterIPPush"
+            android:exported="true" >
+        </service>
+        <service
+            android:name="com.c35.ptc.as.activity.UnRegisterIPPush"
+            android:exported="true" >
+        </service>
+        <service android:name="com.c35.ptc.as.activity.SupporterService" />
+        <service android:name="com.c35.ptc.as.util.C35OpenDownloadService" >
+        </service>
+
+        <receiver android:name="com.c35.ptc.as.activity.RebootPhoneReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CLOSE_SYSTEM_DIALOGS" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.INPUT_METHOD_CHANGED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.UID_REMOVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PROVIDER_CHANGED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_CHANGED" />
+                <action android:name="android.intent.action.PACKAGE_INSTALL" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_LOW" />
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.LocaleChangReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.NetWorkChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.c35.ptc.as.dbutil.MainContentProvider"
+            android:authorities="com.c35.mtd.pushmail.maincontentprovider" />
+
+        <service android:name="com.c35.ptc.as.activity.RepetListener" >
+        </service>
+    </application>
+
+    <uses-sdk android:minSdkVersion="9" />
+
+</manifest>

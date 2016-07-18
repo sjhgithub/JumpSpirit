@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <WebView
+	    android:id="@+id/web_view"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@id/progress_bar" />
+
+    <LinearLayout
+        android:id="@+id/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/progress_bar"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+		    <ImageView
+		        android:id="@+id/image_view_error"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/attachment_preview_error" />
+
+		    <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:orientation="vertical" >
+
+	            <TextView
+	                android:id="@+id/text_view_error_filename"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:layout_marginBottom="8dp"
+		            android:paddingTop="15dp"
+		            android:textColor="#666464"
+		            android:textSize="15sp" />
+
+	            <TextView
+	                android:id="@+id/text_view_error_size"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:textColor="#666464"
+	                android:textSize="12sp" />
+
+            </LinearLayout>
+
+	    </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:text="@string/attachment_preview_error_hint" />
+
+        <Button
+            android:id="@+id/button_refresh"
+            style="@style/style_button_green"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_clean_cache"
+            android:gravity="center"
+            android:textColor="@color/light_blue"
+            android:text="@string/attachment_preview_refresh_button" />
+
+        <Button
+            android:id="@+id/button_download"
+            style="@style/style_button_green"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/icon_no_chat_list_conent"
+            android:gravity="center"
+            android:text="@string/attachment_preview_download_button" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.60"
+        android:background="@color/black"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_view_info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/text_view_info_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

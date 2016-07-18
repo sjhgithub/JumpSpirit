@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- MessageView 删除 -->
+    <item
+        android:id="@+id/delete"
+        android:alphabeticShortcut="q"
+        android:title="@string/delete_action"/>
+
+    <!-- MessageView 标记未读-->
+    <item
+        android:id="@+id/toggle_unread"
+        android:alphabeticShortcut="u"
+        android:title="@string/mark_as_unread_action"/>
+
+    <!-- MessageView 新邮件-->
+    <item
+        android:id="@+id/compose"
+        android:alphabeticShortcut="c"
+        android:title="@string/compose_action"/>
+
+</menu>
